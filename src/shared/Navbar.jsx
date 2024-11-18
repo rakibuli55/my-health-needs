@@ -3,7 +3,7 @@ import Logo from "../assets/images/logo/logo.svg";
 import CartIcon from "../assets/images/icon/cart.svg";
 import { useForm } from "react-hook-form";
 import { GoSearch } from "react-icons/go";
-import HeaderBtn from "../Components/HeaderComponents/HeaderBtn";
+import HeaderBtn from "../components/HeaderComponents/HeaderBtn";
 
 function Navbar() {
   const {

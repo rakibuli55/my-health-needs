@@ -1,0 +1,27 @@
+import HeroSection from "../components/HomePageComponents/HeroSection";
+import SymptomsSection from "../components/HomePageComponents/SymptomsSection";
+import PersonalizedSection from "../components/HomePageComponents/PersonalizedSection";
+import PopularTreatment from "../components/HomePageComponents/PopularTreatment";
+import HealthcareSection from "../components/HomePageComponents/HealthcareSection";
+import TeamSection from "../components/HomePageComponents/TeamSection";
+import TestimonialSection from "../components/HomePageComponents/TestimonialSection";
+import FaqSection from "../components/HomePageComponents/FaqSection";
+import PageTitle from "@/components/Common/PageTitle";
+
+function HomePage() {
+  return (
+    <div>
+      <PageTitle title="Home" />
+      <HeroSection />
+      <SymptomsSection />
+      <PersonalizedSection />
+      <PopularTreatment />
+      <HealthcareSection />
+      <TeamSection />
+      <TestimonialSection />
+      <FaqSection />
+    </div>
+  );
+}
+
+export default HomePage;

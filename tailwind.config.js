@@ -25,6 +25,8 @@ export default {
   			primryDark: '#0063A9',
   			menuLinkColor: '#1C404A',
   			categoryBtnColor: '#052D4C',
+  			activeColor: '#0CA6FC',
+			textColor:"#404A60",
   			headerBg: '#EFF8FF',
   			headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
   			healthcareCardBg: '#01548B',

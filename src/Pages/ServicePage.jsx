@@ -1,11 +1,13 @@
+import InnerSection from "@/components/Common/InnerSection";
 import FaqSection from "@/components/HomePageComponents/FaqSection";
 import AllTreatmentSection from "@/components/ServicePageComponents/AllTreatmentSection";
-import HeroSection from "@/components/ServicePageComponents/HeroSection";
+import serviceHeroBg from "../assets/images/service-hero-bg.png";
 
 function ServicePage() {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <InnerSection bgImg={serviceHeroBg} service="HealthCare Services" />
       <AllTreatmentSection />
       <FaqSection />
     </div>

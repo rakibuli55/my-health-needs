@@ -67,7 +67,7 @@
   .menu-item {
     @apply text-[18px] font-semibold text-menuLinkColor duration-200 ease-in-out hover:text-primary;
   }
-  .menu-item.active{
+  .menu-item.active {
     @apply text-primary;
   }
   .btn-gradient {
@@ -91,63 +91,104 @@
   .team-card:hover img {
     @apply scale-[1.1];
   }
-  .accordion-item button:hover{
+  .accordion-item button:hover {
     text-decoration: none;
   }
-  .accordion-item button svg{
+  .accordion-item button svg {
     height: 30px;
     width: 30px;
   }
 
-  .footer-contacts li{
-    @apply flex items-center gap-2
+  .footer-contacts li {
+    @apply flex items-center gap-2;
   }
-  .footer-contacts li svg{
+  .footer-contacts li svg {
     height: 24px;
     width: 24px;
   }
-  .footer--box.links h4{
+  .footer--box.links h4 {
     @apply text-[24px] mb-12;
   }
-  .footer--box.links li a{
+  .footer--box.links li a {
     @apply inline-block mt-6;
   }
-  .footer--box.links li:first-child a{
+  .footer--box.links li:first-child a {
     @apply mt-0;
   }
-  .breadcrumbs{
-    @apply text-[24px]
+  .breadcrumbs {
+    @apply text-[24px];
   }
-  .breadcrumb--item{
+  .breadcrumb--item {
     @apply font-semibold text-[rgba(255,255,255,0.6)];
   }
-  .breadcrumb--item.active{
-    @apply text-white
+  .breadcrumb--item.active {
+    @apply text-white;
   }
-  .treatment-wrap{
+  .treatment-wrap {
     padding-left: 10px;
     padding-right: 10px;
     width: 33.33%;
     flex: 0 0 33.33%;
   }
-  .treatment--row{
+  .treatment--row {
     margin-right: -10px;
     margin-left: -10px;
   }
-  .health-feature li{
-    @apply flex items-center gap-5 mt-7 first:mt-0
+  .health-feature li {
+    @apply flex items-center gap-5 mt-7 first:mt-0;
   }
-  .health-feature li p{
+  .health-feature li p {
     @apply text-[24px] font-medium capitalize;
   }
-  .quick-consultation-feature li{
+  .quick-consultation-feature li {
     @apply flex items-center gap-[6px] mt-[10px] first:mt-0;
   }
-  .quick-consultation-feature li img{
+  .quick-consultation-feature li img {
     @apply h-6 w-6;
   }
-  .quick-consultation-feature li p{
-    @apply text-[18px] leading-[164%]
+  .quick-consultation-feature li p {
+    @apply text-[18px] leading-[164%];
+  }
+  .product-wrapper:hover .product-img img {
+    @apply scale-[1.1];
+  }
+  .step-indicators li {
+    @apply flex flex-col items-center;
+  }
+  .step-indicators li .icon {
+    @apply h-20 w-20 flex items-center justify-center rounded-full border-[2px] border-indicatorsColor text-[32px] font-semibold text-indicatorsColor bg-white;
+  }
+  .step-indicators li span {
+    @apply text-[24px] text-indicatorsColor font-semibold mt-3 inline-block;
+  }
+  .checkout-stepform label {
+    @apply block text-[24px] font-semibold mb-[26px] text-[rgba(0,0,0,0.80)];
+  }
+  .checkout-stepform input,
+  .checkout-stepform textarea {
+    @apply w-full py-[22px] px-10 text-[rgba(0,0,0,0.80)] bg-transparent border border-[rgba(0,0,0,0.30)] rounded-[10px] focus:outline-none text-[24px];
+  }
+  .checkout-stepform textarea {
+    @apply h-[307px] resize-none;
+  }
+  .checkout-stepform .react-tel-input .form-control {
+    font-size: 24px;
+    border-radius: 5px;
+    line-height: 25px;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    @apply border-[rgba(0,0,0,0.30)]
+  }
+  .royalmail-radio-wrap label::before,
+  .royalMail-radio::after{
+    content: '';
+    @apply absolute h-10 w-10 top-1/2 translate-y-[-50%] left-10 bg-white rounded-full border border-[rgba(0,0,0,0.5)]
+  }
+  .royalmail-radio-wrap input:checked + label::after{
+    content: '';
+    @apply h-6 w-6 bg-primryDark left-[48px] 
   }
 }
 
@@ -165,8 +206,8 @@
 .swiper-pagination-bullet-active {
   @apply !bg-black !opacity-100;
 }
-.about-faq .border-b{
-  border: none
+.about-faq .border-b {
+  border: none;
 }
 @layer base {
   * {

@@ -22,6 +22,8 @@ export default {
   				DEFAULT: '#0CA6FC',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
+			primaryLight:"#EFF8FF",
+			titleText: '#000',
   			primryDark: '#0063A9',
   			menuLinkColor: '#1C404A',
   			categoryBtnColor: '#052D4C',
@@ -29,6 +31,8 @@ export default {
 			textColor:"#404A60",
   			headerBg: '#EFF8FF',
   			headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
+  			subtitleText: 'rgba(0, 0, 0, 0.80)',
+  			borderLight: 'rgba(0, 0, 0, 0.20)',
   			healthcareCardBg: '#01548B',
   			teamCardColor: '#dff1ff',
   			background: 'hsl(var(--background))',

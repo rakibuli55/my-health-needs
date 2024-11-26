@@ -1,3 +1,4 @@
+
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -9,6 +10,9 @@ import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
 import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
 import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
 import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
+import AssessmentPage from "@/Pages/AssessmentPage";
+import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
+
 
 // Breadcrumb configuration
 const routes = [
@@ -34,6 +38,14 @@ const router = createBrowserRouter([
         path: '/service/:name',
         element: <SingleHealthPage />,
       },
+      {
+        path: '/assessment',
+        element: <AssessmentPage></AssessmentPage>
+      },
+      {
+        path: '/medicine-details',
+        element: <MedicineDetailsPage></MedicineDetailsPage>
+      }
     ],
   },
   {

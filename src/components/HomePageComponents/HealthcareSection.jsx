@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HealthCard from './HealthCard'
 
 function HealthcareSection() {

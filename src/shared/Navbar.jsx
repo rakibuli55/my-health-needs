@@ -73,9 +73,9 @@ function Navbar() {
           </form>
           {/* cart  */}
           <div>
-            <div className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-full">
+            <Link to='/dashboard/user-homepage' className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-full">
               <img className="w-7 h-7" src={CartIcon} alt={CartIcon} />
-            </div>
+            </Link>
           </div>
           {/* header btn  */}
           <div>

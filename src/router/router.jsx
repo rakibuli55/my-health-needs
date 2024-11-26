@@ -10,6 +10,11 @@ import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
 import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
 import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 
+import AssessmentPage from '@/Pages/AssessmentPage';
+import MedicineDetailsPage from '@/Pages/MedicineDetailsPage';
+
+import CheckoutPage from '@/Pages/CheckoutPage';
+
 // Breadcrumb configuration
 const routes = [
   { path: '/', breadcrumb: 'Home' },
@@ -34,32 +39,42 @@ const router = createBrowserRouter([
         path: '/service/:name',
         element: <SingleHealthPage />,
       },
+      {
+        path: '/assessment',
+        element: <AssessmentPage></AssessmentPage>,
+      },
+      {
+        path: '/medicine-details',
+        element: <MedicineDetailsPage></MedicineDetailsPage>,
+      },
+      {
+        path: '/checkout',
+        element: <CheckoutPage />,
+      },
     ],
   },
   {
     path: '/dashboard',
     element: <DashboardLayout />,
-    children:[
-
+    children: [
       // user dashboard:
       {
-        path:"/dashboard/user-homepage",
-        element:<UserDashboardHome/>
+        path: '/dashboard/user-homepage',
+        element: <UserDashboardHome />,
       },
       {
-        path:"/dashboard/user-order-history",
-        element:<UserDashboardOrder/>
+        path: '/dashboard/user-order-history',
+        element: <UserDashboardOrder />,
       },
       {
-        path:"/dashboard/user-payments",
-        element:<UserDashboardPayments/>
+        path: '/dashboard/user-payments',
+        element: <UserDashboardPayments />,
       },
       {
-        path:"/dashboard/user-profile",
-        element:<UserDashboardProfile/>
+        path: '/dashboard/user-profile',
+        element: <UserDashboardProfile />,
       },
-
-    ]
+    ],
   },
 ]);
 

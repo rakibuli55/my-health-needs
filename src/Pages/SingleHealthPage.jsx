@@ -1,12 +1,17 @@
-import HeroSection from '@/components/SingleHealthPageComponents/HeroSection'
-import React from 'react'
+import AboutHealthProblem from "@/components/SingleHealthPageComponents/AboutHealthProblem";
+import HeroSection from "@/components/SingleHealthPageComponents/HeroSection";
+import QuickConsultation from "@/components/SingleHealthPageComponents/QuickConsultation";
+import TreatmentOption from "@/components/SingleHealthPageComponents/TreatmentOption";
 
 function SingleHealthPage() {
   return (
     <div>
-        <HeroSection />
+      <HeroSection />
+      <AboutHealthProblem />
+      <QuickConsultation />
+      <TreatmentOption />
     </div>
-  )
+  );
 }
 
-export default SingleHealthPage
+export default SingleHealthPage;

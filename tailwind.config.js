@@ -21,10 +21,14 @@ export default {
         },
         primaryLight: "#EFF8FF",
         primryDark: "#0063A9",
+        titleText: '#000',
         paraCOlor: "#5A5C5F",
         menuLinkColor: "#1C404A",
         categoryBtnColor: "#052D4C",
         headerBg: "#EFF8FF",
+        headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
+  			subtitleText: 'rgba(0, 0, 0, 0.80)',
+  			borderLight: 'rgba(0, 0, 0, 0.20)',
         headerSearchbarPlaceHolder: "rgba(0, 0, 0, 0.40)",
         healthcareCardBg: "#01548B",
         teamCardColor: "#dff1ff",
@@ -94,6 +98,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+
   },
   plugins: [require("tailwindcss-animate")],
 };

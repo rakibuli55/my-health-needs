@@ -72,12 +72,10 @@ const UserDashboardPayments = () => {
   ];
 
   return (
-    <div>
-      <div className="mt-12 bg-white rounded-md px-16 py-10">
-        <DashboardTitle title="Payment History" />
+    <div className="  bg-white rounded-md px-16 py-10">
+      <DashboardTitle title="Payment History" />
 
-        <DashboardTable orders={payments} />
-      </div>
+      <DashboardTable orders={payments} />
     </div>
   );
 };

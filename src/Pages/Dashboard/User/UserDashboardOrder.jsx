@@ -86,7 +86,7 @@ const UserDashboardOrder = () => {
   ];
   return (
     <div>
-      <div className="mt-12 bg-white rounded-md px-16 py-10">
+      <div className=" bg-white rounded-md px-16 py-10">
         <DashboardTitle title="My Order" />
 
         <DashboardTable orders={orders} />

@@ -10,7 +10,7 @@ function AssessmentPage() {
 
 
   // hook form
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
   return (

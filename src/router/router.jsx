@@ -5,6 +5,7 @@ import HomePage from "../Pages/HomePage";
 import ServicePage from "../Pages/ServicePage";
 import SingleHealthPage from "@/Pages/SingleHealthPage";
 import AssessmentPage from "@/Pages/AssessmentPage";
+import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
 
 // Breadcrumb configuration
 const routes = [
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/assessment',
         element: <AssessmentPage></AssessmentPage>
+      },
+      {
+        path: '/medicine-details',
+        element: <MedicineDetailsPage></MedicineDetailsPage>
       }
     ],
   },

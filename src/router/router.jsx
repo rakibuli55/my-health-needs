@@ -1,4 +1,5 @@
 
+
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -12,6 +13,8 @@ import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments'
 import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 import AssessmentPage from "@/Pages/AssessmentPage";
 import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
+import CheckoutPage from "@/Pages/CheckoutPage";
+
 
 
 // Breadcrumb configuration
@@ -39,12 +42,17 @@ const router = createBrowserRouter([
         element: <SingleHealthPage />,
       },
       {
+
         path: '/assessment',
         element: <AssessmentPage></AssessmentPage>
       },
       {
         path: '/medicine-details',
         element: <MedicineDetailsPage></MedicineDetailsPage>
+
+        path: "/checkout",
+        element: <CheckoutPage />,
+
       }
     ],
   },

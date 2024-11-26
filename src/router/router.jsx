@@ -5,6 +5,10 @@ import HomePage from '../Pages/HomePage';
 import ServicePage from '../Pages/ServicePage';
 import SingleHealthPage from '@/Pages/SingleHealthPage';
 import DashboardLayout from '@/layout/DashboardLayout';
+import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
+import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
+import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
+import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 
 // Breadcrumb configuration
 const routes = [
@@ -36,7 +40,25 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <DashboardLayout />,
     children:[
-      
+
+      // user dashboard:
+      {
+        path:"/dashboard/user-homepage",
+        element:<UserDashboardHome/>
+      },
+      {
+        path:"/dashboard/user-order-history",
+        element:<UserDashboardOrder/>
+      },
+      {
+        path:"/dashboard/user-payments",
+        element:<UserDashboardPayments/>
+      },
+      {
+        path:"/dashboard/user-profile",
+        element:<UserDashboardProfile/>
+      },
+
     ]
   },
 ]);

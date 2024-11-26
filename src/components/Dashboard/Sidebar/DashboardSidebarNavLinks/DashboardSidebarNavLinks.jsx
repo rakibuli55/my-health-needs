@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from 'react-router-dom';
 
-const UserDashboardSidebar = ({ userDashboardNavLinks }) => {
-    const currentPath = useLocation().pathname;
-
+const DashboardSidebarNavLinks = ({ userDashboardNavLinks }) => {
+  const currentPath = useLocation().pathname;
   return (
     <div className="w-full space-y-4">
       {userDashboardNavLinks?.map((navLink) => (
@@ -32,4 +31,4 @@ const UserDashboardSidebar = ({ userDashboardNavLinks }) => {
   );
 };
 
-export default UserDashboardSidebar;
+export default DashboardSidebarNavLinks;

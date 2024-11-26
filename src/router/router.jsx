@@ -9,10 +9,8 @@ import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
 import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
 import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
 import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
-
 import AssessmentPage from '@/Pages/AssessmentPage';
 import MedicineDetailsPage from '@/Pages/MedicineDetailsPage';
-
 import CheckoutPage from '@/Pages/CheckoutPage';
 
 // Breadcrumb configuration
@@ -51,6 +49,17 @@ const router = createBrowserRouter([
         path: '/checkout',
         element: <CheckoutPage />,
       },
+
+      {
+        path: '/assessment',
+        element: <AssessmentPage></AssessmentPage>,
+      },
+      {
+        path: '/medicine-details',
+        element: <MedicineDetailsPage></MedicineDetailsPage>,
+      },
+
+      { path: '/checkout', element: <CheckoutPage /> },
     ],
   },
   {

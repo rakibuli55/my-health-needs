@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -21,6 +22,10 @@ export default {
         },
         primaryLight: "#EFF8FF",
         primryDark: "#0063A9",
+
+        activeColor: '#0CA6FC',
+			  textColor:"#404A60",
+
         titleText: '#000',
         paraCOlor: "#5A5C5F",
         menuLinkColor: "#1C404A",
@@ -29,7 +34,6 @@ export default {
         headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
   			subtitleText: 'rgba(0, 0, 0, 0.80)',
   			borderLight: 'rgba(0, 0, 0, 0.20)',
-        headerSearchbarPlaceHolder: "rgba(0, 0, 0, 0.40)",
         healthcareCardBg: "#01548B",
         teamCardColor: "#dff1ff",
         indicatorsColor: "#074673",

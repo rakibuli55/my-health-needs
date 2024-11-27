@@ -3,6 +3,7 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+
   	extend: {
   		container: {
   			center: 'true',
@@ -26,7 +27,6 @@ export default {
   			categoryBtnColor: '#052D4C',
   			headerBg: '#EFF8FF',
   			headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
-
   			subtitleText: 'rgba(0, 0, 0, 0.80)',
   			borderLight: 'rgba(0, 0, 0, 0.20)',
         healthcareCardBg: "#01548B",

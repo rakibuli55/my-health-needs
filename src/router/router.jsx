@@ -1,21 +1,18 @@
 
-
-import { createBrowserRouter } from 'react-router-dom';
-import Layout from '../layout/Layout';
-import ErrorPage from '../ErrorPage/ErrorPage';
-import HomePage from '../Pages/HomePage';
-import ServicePage from '../Pages/ServicePage';
-import SingleHealthPage from '@/Pages/SingleHealthPage';
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "../layout/Layout";
+import ErrorPage from "../ErrorPage/ErrorPage";
+import HomePage from "../Pages/HomePage";
+import ServicePage from "../Pages/ServicePage";
+import SingleHealthPage from "@/Pages/SingleHealthPage";
 import DashboardLayout from '@/layout/DashboardLayout';
 import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
 import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
 import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
 import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
+
 import AssessmentPage from "@/Pages/AssessmentPage";
 import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
-import CheckoutPage from "@/Pages/CheckoutPage";
-
-
 
 // Breadcrumb configuration
 const routes = [
@@ -49,10 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/medicine-details',
         element: <MedicineDetailsPage></MedicineDetailsPage>
-
+      },
+      {
         path: "/checkout",
         element: <CheckoutPage />,
-
       }
     ],
   },

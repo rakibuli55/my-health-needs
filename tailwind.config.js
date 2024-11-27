@@ -22,8 +22,8 @@ export default {
   				DEFAULT: '#0CA6FC',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
-			primaryLight:"#EFF8FF",
-			titleText: '#000',
+  			primaryLight: '#EFF8FF',
+  			titleText: '#000',
   			primryDark: '#0063A9',
   			menuLinkColor: '#1C404A',
   			categoryBtnColor: '#052D4C',

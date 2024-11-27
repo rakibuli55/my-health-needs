@@ -1,7 +1,13 @@
 import DashboardTitle from '@/components/Dashboard/User/DashboardTitle';
 import { useState } from 'react';
-
+import UserCalendar from '@/components/Dashboard/User/UserCalendar';
 const UserDashboardProfile = () => {
+  const genderOptions = [
+    { id: 'male', label: 'Male' },
+    { id: 'female', label: 'Female' },
+    { id: 'others', label: 'Others' },
+  ];
+
   const [imagePreview, setImagePreview] = useState(
     'https://i.postimg.cc/m2xPtgcd/user.png'
   );
@@ -13,6 +19,12 @@ const UserDashboardProfile = () => {
       setImagePreview(URL.createObjectURL(file));
       setFileName(file.name);
     }
+  };
+
+  const [selectedGender, setSelectedGender] = useState('male');
+
+  const handleGenderChange = (event) => {
+    setSelectedGender(event.target.value);
   };
   return (
     <div className="bg-white rounded-md px-16 py-10">
@@ -73,25 +85,8 @@ const UserDashboardProfile = () => {
                   <label htmlFor="date" className="text-sm md:text-base">
                     Date of Birth
                   </label>
-                  <div
-                    id="dob-show"
-                    className="check-in cursor-pointer rounded-lg border border-black/10 px-4 py-3 text-sm placeholder:text-black/50 focus:outline-none md:text-base 2xl:px-10 2xl:py-5"
-                  >
-                    <label
-                      className="flex cursor-pointer items-center gap-3"
-                      htmlFor=""
-                    >
-                      <span
-                        id="date-of-birth"
-                        className="cursor-pointer font-poppins text-sm md:text-base"
-                      >
-                        19-08-08
-                      </span>
-                      <span
-                        id="check-in-updated-date"
-                        className="font-poppins text-sm md:text-base"
-                      ></span>
-                    </label>
+                  <div className="w-full">
+                    <UserCalendar />
                   </div>
                 </div>
               </div>
@@ -104,48 +99,30 @@ const UserDashboardProfile = () => {
                     Gender
                   </label>
                   <div className="flex items-center gap-4 md:mt-4 md:gap-8">
-                    <div className="flex items-center gap-2 md:gap-4">
-                      <input
-                        type="radio"
-                        name="gender"
-                        id="male"
-                        className="size-4 md:size-6"
-                        checked
-                      />
-                      <label
-                        htmlFor="male"
-                        className="cursor-pointer text-sm md:text-base"
-                      >
-                        Male
-                      </label>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-4">
-                      <input
-                        type="radio"
-                        name="gender"
-                        id="female"
-                        className="size-4 md:size-6"
-                      />
-                      <label
-                        htmlFor="female"
-                        className="cursor-pointer text-sm md:text-base"
-                      >
-                        Female
-                      </label>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-4">
-                      <input
-                        type="radio"
-                        name="gender"
-                        id="others"
-                        className="size-4 md:size-6"
-                      />
-                      <label
-                        htmlFor="others"
-                        className="cursor-pointer text-sm md:text-base"
-                      >
-                        Others
-                      </label>
+                    <div className="flex items-center space-x-4">
+                      {genderOptions.map(({ id, label }) => (
+                        <div
+                          key={id}
+                          className="flex items-center gap-2 md:gap-4"
+                        >
+                          <input
+                            type="radio"
+                            name="gender"
+                            id={id}
+                            value={id}
+                            checked={selectedGender === id}
+                            onChange={handleGenderChange}
+                            className="size-4 md:size-6 text-blue-600 focus:ring-blue-500"
+                            aria-label={label}
+                          />
+                          <label
+                            htmlFor={id}
+                            className="cursor-pointer text-sm md:text-base select-none"
+                          >
+                            {label}
+                          </label>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

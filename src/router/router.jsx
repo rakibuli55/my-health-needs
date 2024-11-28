@@ -1,23 +1,26 @@
-import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layout/Layout";
-import ErrorPage from "../ErrorPage/ErrorPage";
-import HomePage from "../Pages/HomePage";
-import ServicePage from "../Pages/ServicePage";
-import SingleHealthPage from "@/Pages/SingleHealthPage";
-import DashboardLayout from "@/layout/DashboardLayout";
-import UserDashboardHome from "@/Pages/Dashboard/User/UserDashboardHome";
-import UserDashboardOrder from "@/Pages/Dashboard/User/UserDashboardOrder";
-import UserDashboardPayments from "@/Pages/Dashboard/User/UserDashboardPayments";
-import UserDashboardProfile from "@/Pages/Dashboard/User/UserDashboardProfile";
 
+
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from '../layout/Layout';
+import ErrorPage from '../ErrorPage/ErrorPage';
+import HomePage from '../Pages/HomePage';
+import ServicePage from '../Pages/ServicePage';
+import SingleHealthPage from '@/Pages/SingleHealthPage';
+import DashboardLayout from '@/layout/DashboardLayout';
+import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
+import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
+import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
+import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
+import AssessmentPage from '@/Pages/AssessmentPage';
+import MedicineDetailsPage from '@/Pages/MedicineDetailsPage';
+import CheckoutPage from '@/Pages/CheckoutPage';
 import AssessmentPage from "@/Pages/AssessmentPage";
-import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
-import CheckoutPage from "@/Pages/CheckoutPage";
 import LoginPage from "@/Pages/Auth/LoginPage";
 import SignupPage from "@/Pages/Auth/SignupPage";
 import AuthLayout from "@/layout/AuthLayout";
 import HowItWorksPage from "@/Pages/HowItWorksPage";
 import FaqPage from "@/Pages/FaqPage";
+
 
 // Breadcrumb configuration
 const routes = [
@@ -46,6 +49,7 @@ const router = createBrowserRouter([
         path: "/service/:name",
         element: <SingleHealthPage />,
       },
+
       {
         path: "/consultation",
         element: <AssessmentPage></AssessmentPage>,
@@ -55,7 +59,7 @@ const router = createBrowserRouter([
         element: <MedicineDetailsPage></MedicineDetailsPage>,
       },
       {
-        path: "/checkout",
+        path: '/checkout',
         element: <CheckoutPage />,
       },
       {
@@ -88,15 +92,15 @@ const router = createBrowserRouter([
     children: [
       // user dashboard:
       {
-        path: "/dashboard/user-homepage",
+        path: '/dashboard/user-homepage',
         element: <UserDashboardHome />,
       },
       {
-        path: "/dashboard/user-order-history",
+        path: '/dashboard/user-order-history',
         element: <UserDashboardOrder />,
       },
       {
-        path: "/dashboard/user-payments",
+        path: '/dashboard/user-payments',
         element: <UserDashboardPayments />,
       },
       {

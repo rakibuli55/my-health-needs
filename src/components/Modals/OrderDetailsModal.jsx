@@ -106,7 +106,7 @@ const OrderDetailsModal = ({ setOpen }) => {
               </div>
               <div className="w-1/2 font-bold text-base flex items-center justify-between">
                 <h2>Quantity</h2>
-                <h2>Price</h2>
+                <h2 className='mr-8'>Price</h2>
                 <h2>Amount</h2>
               </div>
             </div>

@@ -10,7 +10,7 @@ function InnerSection({ bgImg, service }) {
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         <div className="container">
-          <h1 className="text-[76px] font-bold leading-normal text-menuLinkColor text-center">
+          <h1 className="text-[76px] font-bold leading-normal text-white text-center">
             {service}
           </h1>
           <div data-aos="zoom-left"

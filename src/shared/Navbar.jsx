@@ -36,6 +36,8 @@ function Navbar() {
                 HealthCare Service
               </NavLink>
             </li>
+            <li>
+              <NavLink to={"/howitworks"} className="menu-item">
             <li data-aos="zoom-up"
           data-aos-duration="2000">
               <NavLink to={"/how-it-works"} className="menu-item">
@@ -48,6 +50,8 @@ function Navbar() {
                 FAQ
               </NavLink>
             </li>
+            <li>
+              <NavLink to={"/auth/login"} className="menu-item">
             <li data-aos="zoom-up"
           data-aos-duration="2000">
               <NavLink to={"/login"} className="menu-item">
@@ -86,6 +90,8 @@ function Navbar() {
             </Link>
           </div>
           {/* header btn  */}
+          <div>
+            <Link to={"/auth/signup"}>
           <div    data-aos="zoom-left"
                   data-aos-duration="2000">
             <Link to={"/"}>

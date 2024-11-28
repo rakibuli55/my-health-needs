@@ -33,7 +33,7 @@ function ProductCard({ item }) {
           <p className="mt-[10px] text-[20px] font-bold text-primary">${item.price}</p>
           {/* button  */}
           <div className="flex items-center justify-between mt-5">
-              <Link to={`/`}>
+              <Link to={`/consultation`}>
               <CommonButtonV2 type="fill" text="Continue" />
               </Link>
               <Link to={'/'}>

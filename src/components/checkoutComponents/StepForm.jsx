@@ -234,7 +234,6 @@ function StepForm() {
                       {uploadedFile?.originalFile?.originalFileName}
                     </p>
                   </div>
-                  <img src="" alt="" />
                 </div>
                 <div>
                   <Controller

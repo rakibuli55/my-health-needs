@@ -66,7 +66,7 @@ const faqData = [
     ],
   },
   {
-    category: "About MyHealthNeeds",
+    category: "About My Health Needs",
     questions: [
       {
         question: "What is MyHealthNeeds?",

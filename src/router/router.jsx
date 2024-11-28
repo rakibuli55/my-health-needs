@@ -84,7 +84,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/dashboard/user-payments",
-        element:<UserDashboardPayments/>
+        element:<UserDashboardPayments/> 
       },
       {
         path:"/dashboard/user-profile",

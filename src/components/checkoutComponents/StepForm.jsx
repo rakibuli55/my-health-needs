@@ -21,17 +21,17 @@ function StepForm() {
   return (
     <div>
       {/* step indicator  */}
-      <div className="relative z-[1] w-[790px] mx-auto">
-        <ul className="step-indicators flex items-center justify-between">
-          <li>
+      <div data-aos="zoom-up" data-aos-duration="1000" className="relative  z-[1] w-[790px] mx-auto">
+        <ul  className="step-indicators flex items-center justify-between">
+          <li data-aos="zoom-up" data-aos-duration="2000">
             <p className="icon">1</p>
             <span>Delivery</span>
           </li>
-          <li>
+          <li data-aos="zoom-up" data-aos-duration="2000">
             <p className="icon">2</p>
             <span>Review and pay</span>
           </li>
-          <li>
+          <li data-aos="zoom-up" data-aos-duration="2000">
             <p className="icon">3</p>
             <span>Receipt</span>
           </li>
@@ -44,24 +44,24 @@ function StepForm() {
         <div className="step-one">
           {/* step title */}
           <div className="w-[882px] mx-auto text-center my-[100px]">
-            <h3 className="text--xl mb-[60px]">
+            <h3 data-aos="zoom-up" data-aos-duration="2000" className="text--xl mb-[60px]">
               Where should we deliver your order?
             </h3>
-            <p className="text-[24px] text-[rgba(0,0,0,0.60)]">
+            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)]">
               We ensure all packages are shipped in discreet, plain packaging
               with no mention of MyHealthNeedsLondon, guaranteeing your privacy.
             </p>
-            <p className="text-[24px] text-[rgba(0,0,0,0.60)] mt-[30px]">
+            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)] mt-[30px]">
               In the next step, you can select your preferred delivery method.
               For now, please provide your delivery address to proceed.
             </p>
           </div>
           {/* name & email  */}
-          <div className="grid grid-cols-2 gap-10">
+          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-2 gap-10">
             {/* name  */}
-            <div className="mt-[60px]">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
-                <label htmlFor="name">Name</label>
+                <label data-aos="zoom-in" data-aos-duration="2000" htmlFor="name">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -72,7 +72,7 @@ function StepForm() {
               {errors?.name && <p>{errors.name}</p>}
             </div>
             {/* email  */}
-            <div className="mt-[60px]">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
                 <label htmlFor="email">Email</label>
                 <input
@@ -86,7 +86,7 @@ function StepForm() {
             </div>
           </div>
           {/* billing address  */}
-          <div className="mt-[60px]">
+          <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
             <div>
               <label htmlFor="email">Billing address</label>
               <textarea
@@ -99,7 +99,7 @@ function StepForm() {
             </div>
             {errors?.billingAddress && <p>{errors.billingAddress}</p>}
             {/* find location  */}
-            <div className="mt-10 w-fit mx-auto cursor-pointer">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-10 w-fit mx-auto cursor-pointer">
               <div className="flex items-center gap-2 text-[20px] font-medium text-white bg-primary rounded-[10px] py-4 px-6">
                 <p className="text-[24px]">
                   <CiLocationOn />
@@ -109,7 +109,7 @@ function StepForm() {
             </div>
           </div>
           {/* contact, city & post code  */}
-          <div className="grid grid-cols-3 gap-10">
+          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-3 gap-10">
             {/* contact  */}
             <div className="mt-[60px]">
               <label htmlFor="contact">Contact</label>
@@ -127,7 +127,7 @@ function StepForm() {
               />
             </div>
             {/* city  */}
-            <div className="mt-[60px]">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
                 <label htmlFor="city">City</label>
                 <input
@@ -140,7 +140,7 @@ function StepForm() {
               {errors?.city && <p>{errors.city}</p>}
             </div>
             {/* post code  */}
-            <div className="mt-[60px]">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
                 <label htmlFor="email">Postcode</label>
                 <input
@@ -157,7 +157,7 @@ function StepForm() {
           </div>
           {/* delivery information  */}
           <div>
-            <div className="text-center w-[882px] mx-auto mt-[172px]">
+            <div data-aos="zoom-in" data-aos-duration="2000" className="text-center w-[882px] mx-auto mt-[172px]">
               <h3 className="text--xl mb-5">Delivery Information</h3>
               <p className="text-[24px] text-primary">
                 Due to increased demand, our clinical team may take up to 4
@@ -172,8 +172,8 @@ function StepForm() {
               </p>
             </div>
             {/* Royal Mail Tracked */}
-            <div className="mt-[100px] royalmail-radio-wrap">
-            <input
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[100px] royalmail-radio-wrap">
+              <input
                 className="hidden"
                 id="royalMail"
                 type="checkbox"
@@ -183,7 +183,7 @@ function StepForm() {
                 htmlFor="royalMail"
                 className="royalMail-radio relative py-[36px] pr-10 pl-[100px] bg-primaryLight border-[2px] border-primryDark rounded-[10px] cursor-pointer"
               >
-                <div className="w-[800px]">
+                <div data-aos="zoom-in" data-aos-duration="2000" className="w-[800px]">
                   <h4 className="text-[24px] font-semibold text-primryDark mb-[10px]">
                     Royal Mail Tracked™
                   </h4>
@@ -193,7 +193,6 @@ function StepForm() {
                   </p>
                 </div>
               </label>
-              
             </div>
           </div>
         </div>

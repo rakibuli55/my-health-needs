@@ -4,7 +4,8 @@ import PropTypes from "prop-types"
 function CommonQuestionBox({question, children }) {
 
   return (
-    <div className="px-8 py-12 rounded-xl border-borderLight border">
+    <div data-aos="zoom-in"
+    data-aos-duration="2000" className="px-8 py-12 rounded-xl border-borderLight border">
         <div>
             <h4 className="text-xl text-subtitleText pb-6">{question}</h4>
         </div>
@@ -15,7 +16,6 @@ function CommonQuestionBox({question, children }) {
     </div>
   )
 }
-
 
 CommonQuestionBox.propTypes = {
     question: PropTypes.text,

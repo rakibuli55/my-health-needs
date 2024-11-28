@@ -11,7 +11,8 @@ function SingleReviews() {
   };
 
   return (
-    <div className="bg-[#EFF8FF] rounded-xl border p-6">
+    <div data-aos="zoom-up"
+    data-aos-duration="2000"  className="bg-[#EFF8FF] rounded-xl border p-6">
       <div className="flex items-center gap-8 pb-4 border-b border-[#C1C4CC] border-dashed">
         <h4 className="text-[#222E48] ">Mar 03, 2024</h4>
         <h4 className="text-[#222E48]">09:01 am</h4>

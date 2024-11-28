@@ -30,15 +30,15 @@ function SignupPage() {
     <div className="min-h-[800px] flex justify-center items-center">
       <div className="container w-4/12">
         <div className="pb-4">
-          <h3 className="text-4xl font-bold pb-2 text-[#232323]">Sign Up</h3>
-          <p className="text-[#969696]">
+          <h3 data-aos="zoom-up" data-aos-duration="2000" className="text-4xl font-bold pb-2 text-[#232323]">Sign Up</h3>
+          <p data-aos="zoom-up" data-aos-duration="2000" className="text-[#969696]">
             Sign up to enjoy the feature of MyLondonPharmacy
           </p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} action="">
           {/* input */}
           <div className="bg-white pt-4 space-y-6 rounded-lg">
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type="text"
                 id="name"
@@ -54,7 +54,7 @@ function SignupPage() {
                 Your Name
               </label>
             </div>
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <Popover>
                 <PopoverTrigger asChild>
                   <Button
@@ -78,7 +78,7 @@ function SignupPage() {
                 </PopoverContent>
               </Popover>
             </div>
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type="email"
                 id="email"
@@ -94,7 +94,7 @@ function SignupPage() {
                 Email
               </label>
             </div>
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type={toggle ? "password" : "text"}
                 id="password"
@@ -123,7 +123,7 @@ function SignupPage() {
                 />
               )}
             </div>
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type={toggle2 ? "password" : "text"}
                 id="confirm_password"
@@ -154,20 +154,20 @@ function SignupPage() {
             </div>
           </div>
           {/* button */}
-          <div className="pt-6">
+          <div data-aos="zoom-up" data-aos-duration="2000" className="pt-6">
             <button className="bg-primary text-white font-semibold w-full py-4 rounded-lg">
             Sign up
             </button>
           </div>
         </form>
 
-        <div className="flex items-center py-5 gap-2 w-full">
+        <div data-aos="zoom-up" data-aos-duration="2000" className="flex items-center py-5 gap-2 w-full">
           <div className="flex-1 border-[0.5px] border-[#D9D9D9]"></div>
           <span className="text-[#6E6E6E]">or</span>
           <div className="flex-1 border-[0.5px] border-[#D9D9D9]"></div>
         </div>
 
-        <div className=" w-full">
+        <div data-aos="zoom-up" data-aos-duration="2000" className=" w-full">
           <button className="flex w-full justify-center py-4 border rounded-lg items-center gap-3">
             <h4 className="text-lg font-semibold text-[#232323]">
               Sign in with Google
@@ -207,7 +207,7 @@ function SignupPage() {
           </button>
         </div>
 
-        <div className="flex justify-center items-center pt-5">
+        <div data-aos="zoom-up" data-aos-duration="2000" className="flex justify-center items-center pt-5">
           <h4 className="text-[#6C6C6C]">
           Already have an account?{" "}
             <Link to={"/auth/login"} className="text-[#367AFF] font-medium">
@@ -217,7 +217,7 @@ function SignupPage() {
         </div>
       </div>
 
-      <div className="w-7/12 p-20">
+      <div data-aos="zoom-in" data-aos-duration="2000" className="w-7/12 p-20">
         <img
           className="w-full"
           src="https://i.ibb.co.com/1RHw2mj/aa0ada24ef439cbe3b561d248f33efd6.png"

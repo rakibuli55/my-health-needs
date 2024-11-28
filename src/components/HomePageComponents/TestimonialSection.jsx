@@ -67,12 +67,14 @@ function TestimonialSection() {
   return (
     <section className="px-[50px]">
       <div className="bg-headerBg rounded-[40px] py-[100px]">
-        <div className="container">
+        <div   className="container">
           {/* section title  */}
-          <div className="mb-[10px] text-center">
+          <div  data-aos="zoom-up"
+                data-aos-duration="1000" className="mb-[10px] text-center">
             <h3 className="text--xl">Verified Customer Reviews</h3>
           </div>
           <div>
+            
             <Swiper
               spaceBetween={12}
               slidesPerView={4}
@@ -83,8 +85,9 @@ function TestimonialSection() {
             >
                 {
                     testimonialData.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <div className="py-9 px-[30px] rounded-[10px] bg-white mt-5">
+                        <SwiperSlide  key={item.id}>
+                            <div  data-aos="zoom-in"
+                data-aos-duration="2000" className="py-9 px-[30px] rounded-[10px] bg-white mt-5">
                                 <p className="text-[24px] font-bold text-menuLinkColor leading-[36px] mb-6 text-center">{item.message}</p>
                                 <img className="w-[115px] h-[20px] mx-auto" src={ratingImg} alt="ratingImg" />
                                 <div className="flex items-center justify-center gap-[10px] mt-6">

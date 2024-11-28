@@ -34,13 +34,15 @@ function TeamSection() {
       <div className="container">
         {/* section title  */}
         <div className="mb-10">
-          <h3 className="w-[650px] text-center mx-auto text--xl">
+          <h3  data-aos="zoom-up"
+                data-aos-duration="1000" className="w-[650px] text-center mx-auto text--xl">
             Our mission provide medical equipment in order to.
           </h3>
         </div>
         <div className="grid grid-cols-4 gap-5">
           {teamData.map((item) => (
-            <div key={item.id} className="mt-5">
+            <div  data-aos="zoom-up"
+            data-aos-duration="2000" key={item.id} className="mt-5">
               <TeamCard item={item} />
             </div>
           ))}

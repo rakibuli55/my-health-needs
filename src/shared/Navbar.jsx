@@ -44,7 +44,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/login"} className="menu-item">
+              <NavLink to={"/auth/login"} className="menu-item">
                 Login
               </NavLink>
             </li>
@@ -79,7 +79,7 @@ function Navbar() {
           </div>
           {/* header btn  */}
           <div>
-            <Link to={"/"}>
+            <Link to={"/auth/signup"}>
               <HeaderBtn text="Sign Up" />
             </Link>
           </div>

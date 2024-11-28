@@ -25,6 +25,7 @@ const routes = [
   { path: "/service", breadcrumb: "Service" },
   { path: "/checkout", breadcrumb: "Checkout" },
   { path: "/howitworks", breadcrumb: "How it Works" },
+  { path: "/assessment", breadcrumb: `Consultation` },
 ];
 
 const router = createBrowserRouter([
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         element: <SingleHealthPage />,
       },
       {
-        path: "/assessment",
+        path: "/consultation",
         element: <AssessmentPage></AssessmentPage>,
       },
       {

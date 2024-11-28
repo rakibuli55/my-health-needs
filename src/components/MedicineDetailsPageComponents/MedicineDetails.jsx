@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Link } from "react-router-dom";
 
 
 
@@ -181,11 +182,11 @@ function MedicineDetails() {
             </div>
           </div>
 
-          <div className="pt-20">
+          <Link to={'/checkout'} className="block pt-20">
             <button className="px-8 py-4 text-xl rounded-full bg-[#2EB7FF] text-white w-full font-bold">
               Go to Checkout
             </button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

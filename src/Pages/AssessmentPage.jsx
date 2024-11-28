@@ -113,7 +113,7 @@ function AssessmentPage() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-subtitleText" htmlFor="">
-                  Give us additional information please
+                  Give us additional information please.
                 </label>
                 <textarea
                   className="rounded-xl h-20 resize-none border border-borderLight p-4 text-sm "

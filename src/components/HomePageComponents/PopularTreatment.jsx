@@ -9,17 +9,17 @@ const popularTreatmentData = [
         imgUrl:"https://i.ibb.co.com/C2ksPGf/nephrology.png"
     },
     {
-        id:1,
+        id:2,
         title:"Medicine and Nephrology",
         imgUrl:"https://i.ibb.co.com/v1HkD03/cardiology.png"
     },
     {
-        id:1,
+        id:3,
         title:"Medicine and Nephrology",
         imgUrl:"https://i.ibb.co.com/pRbW7Jf/food.png"
     },
     {
-        id:1,
+        id:4,
         title:"Medicine and Nephrology",
         imgUrl:"https://i.ibb.co.com/hmTQYsY/spine.png"
     },

@@ -13,7 +13,8 @@ export default {
   			}
   		},
   		fontFamily: {
-  			nunito: ["'Nunito', sans-serif"]
+  			nunito: ["'Nunito', sans-serif"],
+  			dmsans: ["'DM Sans', sans-serif"]
   		},
   		colors: {
   			primary: {

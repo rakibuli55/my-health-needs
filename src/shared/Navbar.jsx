@@ -34,7 +34,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/how-it-works"} className="menu-item">
+              <NavLink to={"/howitworks"} className="menu-item">
                 How it works
               </NavLink>
             </li>

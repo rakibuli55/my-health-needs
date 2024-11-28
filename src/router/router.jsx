@@ -14,6 +14,8 @@ import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 import AssessmentPage from "@/Pages/AssessmentPage";
 import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
 import CheckoutPage from "@/Pages/CheckoutPage";
+import HowItWorksPage from '@/Pages/HowItWorksPage';
+import FaqPage from '@/Pages/FaqPage';
 
 
 
@@ -21,6 +23,8 @@ import CheckoutPage from "@/Pages/CheckoutPage";
 const routes = [
   { path: '/', breadcrumb: 'Home' },
   { path: '/service', breadcrumb: 'Service' },
+  { path: '/checkout', breadcrumb: 'Checkout' },
+  { path: '/howitworks', breadcrumb: 'How it Works' },
 ];
 
 const router = createBrowserRouter([
@@ -49,10 +53,18 @@ const router = createBrowserRouter([
       {
         path: '/medicine-details',
         element: <MedicineDetailsPage></MedicineDetailsPage>
-
+      },
+      {
         path: "/checkout",
         element: <CheckoutPage />,
-
+      },
+      {
+        path: "/howitworks",
+        element: <HowItWorksPage />
+      },
+      {
+        path: "/faq",
+        element: <FaqPage />
       }
     ],
   },

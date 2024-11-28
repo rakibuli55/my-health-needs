@@ -14,7 +14,7 @@ function AssessmentPage() {
   const onSubmit = data => console.log(data);
 
   return (
-    <div>
+    <div className="font-dmsans">
       <div className="container ">
         <FormHeader></FormHeader>
 

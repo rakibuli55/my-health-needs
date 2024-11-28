@@ -13,6 +13,10 @@ import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 
 import AssessmentPage from "@/Pages/AssessmentPage";
 import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
+import CheckoutPage from "@/Pages/CheckoutPage";
+import LoginPage from "@/Pages/Auth/LoginPage";
+import SignupPage from "@/Pages/Auth/SignupPage";
+import AuthLayout from "@/layout/AuthLayout";
 
 // Breadcrumb configuration
 const routes = [
@@ -51,7 +55,22 @@ const router = createBrowserRouter([
         path: "/checkout",
         element: <CheckoutPage />,
       }
+      
     ],
+  },
+  {
+    path: '/auth',
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: '/auth/login',
+        element: <LoginPage></LoginPage>
+      },
+      {
+        path: '/auth/signup',
+        element: <SignupPage></SignupPage>
+      }
+    ]
   },
   {
     path: '/dashboard',

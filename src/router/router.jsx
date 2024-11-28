@@ -1,15 +1,14 @@
-
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import HomePage from "../Pages/HomePage";
 import ServicePage from "../Pages/ServicePage";
 import SingleHealthPage from "@/Pages/SingleHealthPage";
-import DashboardLayout from '@/layout/DashboardLayout';
-import UserDashboardHome from '@/Pages/Dashboard/User/UserDashboardHome';
-import UserDashboardOrder from '@/Pages/Dashboard/User/UserDashboardOrder';
-import UserDashboardPayments from '@/Pages/Dashboard/User/UserDashboardPayments';
-import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
+import DashboardLayout from "@/layout/DashboardLayout";
+import UserDashboardHome from "@/Pages/Dashboard/User/UserDashboardHome";
+import UserDashboardOrder from "@/Pages/Dashboard/User/UserDashboardOrder";
+import UserDashboardPayments from "@/Pages/Dashboard/User/UserDashboardPayments";
+import UserDashboardProfile from "@/Pages/Dashboard/User/UserDashboardProfile";
 
 import AssessmentPage from "@/Pages/AssessmentPage";
 import MedicineDetailsPage from "@/Pages/MedicineDetailsPage";
@@ -17,85 +16,94 @@ import CheckoutPage from "@/Pages/CheckoutPage";
 import LoginPage from "@/Pages/Auth/LoginPage";
 import SignupPage from "@/Pages/Auth/SignupPage";
 import AuthLayout from "@/layout/AuthLayout";
+import HowItWorksPage from "@/Pages/HowItWorksPage";
+import FaqPage from "@/Pages/FaqPage";
 
 // Breadcrumb configuration
 const routes = [
-  { path: '/', breadcrumb: 'Home' },
-  { path: '/service', breadcrumb: 'Service' },
+  { path: "/", breadcrumb: "Home" },
+  { path: "/service", breadcrumb: "Service" },
+  { path: "/checkout", breadcrumb: "Checkout" },
+  { path: "/howitworks", breadcrumb: "How it Works" },
+  { path: "/assessment", breadcrumb: `Consultation` },
 ];
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <HomePage />,
       },
       {
-        path: '/service',
+        path: "/service",
         element: <ServicePage />,
       },
       {
-        path: '/service/:name',
+        path: "/service/:name",
         element: <SingleHealthPage />,
       },
       {
-
-        path: '/assessment',
-        element: <AssessmentPage></AssessmentPage>
+        path: "/consultation",
+        element: <AssessmentPage></AssessmentPage>,
       },
       {
-        path: '/medicine-details',
-        element: <MedicineDetailsPage></MedicineDetailsPage>
+        path: "/medicine-details",
+        element: <MedicineDetailsPage></MedicineDetailsPage>,
       },
       {
         path: "/checkout",
         element: <CheckoutPage />,
-      }
-      
+      },
+      {
+        path: "/howitworks",
+        element: <HowItWorksPage />
+      },
+      {
+        path: "/faq",
+        element: <FaqPage />
+      },
     ],
   },
   {
-    path: '/auth',
+    path: "/auth",
     element: <AuthLayout></AuthLayout>,
     children: [
       {
-        path: '/auth/login',
-        element: <LoginPage></LoginPage>
+        path: "/auth/login",
+        element: <LoginPage></LoginPage>,
       },
       {
-        path: '/auth/signup',
-        element: <SignupPage></SignupPage>
-      }
-    ]
+        path: "/auth/signup",
+        element: <SignupPage></SignupPage>,
+      },
+    ],
   },
   {
-    path: '/dashboard',
+    path: "/dashboard",
     element: <DashboardLayout />,
-    children:[
-
+    children: [
       // user dashboard:
       {
-        path:"/dashboard/user-homepage",
-        element:<UserDashboardHome/>
+        path: "/dashboard/user-homepage",
+        element: <UserDashboardHome />,
       },
       {
-        path:"/dashboard/user-order-history",
-        element:<UserDashboardOrder/>
+        path: "/dashboard/user-order-history",
+        element: <UserDashboardOrder />,
       },
       {
-        path:"/dashboard/user-payments",
-        element:<UserDashboardPayments/>
+        path: "/dashboard/user-payments",
+        element: <UserDashboardPayments />,
       },
       {
-        path:"/dashboard/user-profile",
-        element:<UserDashboardProfile/>
+        path: "/dashboard/user-profile",
+        element: <UserDashboardProfile />,
       },
-
-    ]
+    ],
   },
 ]);
 

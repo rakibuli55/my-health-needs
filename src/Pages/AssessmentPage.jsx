@@ -1,21 +1,23 @@
 import CommonQuestionBox from "@/components/AssessmentPageComponents/CommonQuestionBox";
 import FormHeader from "@/components/AssessmentPageComponents/FormHeader";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import InnerSection from "@/components/Common/InnerSection";
+import assesmentBg from "../assets/images/assesment-bg.png"
+
 function AssessmentPage() {
   const { name } = useParams();
-  console.log(name);
+  const navigate = useNavigate()
 
   // hook form
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (data) => {
+    navigate('/medicine-details');
+  }
 
   return (
     <div className="font-dmsans">
+      <InnerSection bgImg={assesmentBg} service="Treatment" />
       <div data-aos="zoom-up" data-aos-duration="2000" className="container ">
         <FormHeader></FormHeader>
 

@@ -141,16 +141,29 @@ function AllTreatmentSection() {
       <div className="container">
         {/* section title  */}
         <div className="text-center">
-          <h2 className="text-[36px] font-bold leading-normal text-primary">
+          <h2
+            data-aos="zoom-up"
+            data-aos-duration="2000"
+            className="text-[36px] font-bold leading-normal text-primary"
+          >
             Our All Treatments
           </h2>
-          <div className="w-[638px] mx-auto mt-5">
+          <div
+            data-aos="zoom-up"
+            data-aos-duration="2000"
+            className="w-[638px] mx-auto mt-5"
+          >
             <Searchbar />
           </div>
         </div>
         <div>
           {treatmentsCategories.map((category) => (
-            <div key={category.categoryName} className="mt-10">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              key={category.categoryName}
+              className="mt-10"
+            >
               <TreatmentBox item={category} />
             </div>
           ))}

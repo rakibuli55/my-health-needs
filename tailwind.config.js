@@ -4,34 +4,31 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      container: {
-        center: "true",
-        padding: "24px",
-        screen: {
-          "2xl": "1545px",
-        },
-      },
-      fontFamily: {
-        nunito: ["'Nunito', sans-serif"],
-      },
-      colors: {
-        primary: {
-          DEFAULT: "#0CA6FC",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        primaryLight: "#EFF8FF",
-        primryDark: "#0063A9",
+  	extend: {
+  		container: {
+  			center: 'true',
+  			padding: '24px',
+  			screen: {
+  				'2xl': '1545px'
+  			}
+  		},
+  		fontFamily: {
+  			nunito: ["'Nunito', sans-serif"],
+  			dmsans: ["'DM Sans', sans-serif"]
+  		},
+  		colors: {
+  			primary: {
+  				DEFAULT: '#0CA6FC',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			primaryLight: '#EFF8FF',
+  			titleText: '#000',
+  			primryDark: '#0063A9',
+  			menuLinkColor: '#1C404A',
+  			categoryBtnColor: '#052D4C',
+  			headerBg: '#EFF8FF',
+  			headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
 
-        activeColor: '#0CA6FC',
-			  textColor:"#404A60",
-
-        titleText: '#000',
-        paraCOlor: "#5A5C5F",
-        menuLinkColor: "#1C404A",
-        categoryBtnColor: "#052D4C",
-        headerBg: "#EFF8FF",
-        headerSearchbarPlaceHolder: 'rgba(0, 0, 0, 0.40)',
   			subtitleText: 'rgba(0, 0, 0, 0.80)',
   			borderLight: 'rgba(0, 0, 0, 0.20)',
         healthcareCardBg: "#01548B",

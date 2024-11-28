@@ -6,19 +6,24 @@ function AssessmentPage() {
   const { name } = useParams();
   console.log(name);
 
- 
-
-
   // hook form
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   return (
-    <div>
-      <div className="container ">
+    <div className="font-dmsans">
+      <div data-aos="zoom-up" data-aos-duration="2000" className="container ">
         <FormHeader></FormHeader>
 
-        <form onSubmit={handleSubmit(onSubmit)} action="" className="py-14 space-y-2.5">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          action=""
+          className="py-14 space-y-2.5"
+        >
           <CommonQuestionBox question={"1. What is your biological sex?"}>
             <div className="flex items-center gap-4">
               <div>
@@ -76,7 +81,11 @@ function AssessmentPage() {
               "2. Do you believe you have the ability to make healthcare decisions for yourself?"
             }
           >
-            <div className="flex flex-col space-y-5">
+            <div
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className="flex flex-col space-y-5"
+            >
               <div className="flex items-center gap-4">
                 <div>
                   <input
@@ -111,9 +120,13 @@ function AssessmentPage() {
                   </label>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
+              <div
+                data-aos="zoom-up"
+                data-aos-duration="2000"
+                className="flex flex-col gap-2"
+              >
                 <label className="text-subtitleText" htmlFor="">
-                  Give us additional information please
+                  Give us additional information please.
                 </label>
                 <textarea
                   className="rounded-xl h-20 resize-none border border-borderLight p-4 text-sm "
@@ -130,7 +143,11 @@ function AssessmentPage() {
               "3. Are you taking any medications currently? This includes both prescription-only and over-the-counter medications, as well as homoeopathic remedies."
             }
           >
-            <div className="flex flex-col space-y-5">
+            <div
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className="flex flex-col space-y-5"
+            >
               <div className="flex items-center gap-4">
                 <div>
                   <input
@@ -167,23 +184,33 @@ function AssessmentPage() {
               </div>
             </div>
           </CommonQuestionBox>
-          <CommonQuestionBox
-            question={
-              "2. How much do you weight?"
-            }
-          >
-            <div className="flex flex-col space-y-5">
+          <CommonQuestionBox question={"2. How much do you weight?"}>
+            <div
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className="flex flex-col space-y-5"
+            >
               <div className="flex flex-col gap-2">
                 <label className="text-subtitleText" htmlFor="kilograms">
-                Kilograms
+                  Kilograms
                 </label>
-                <input placeholder="Enter you weight" className="px-3 text-sm py-3 rounded-lg border border-borderLight" type="number" name="kilograms" id="kilograms" {...register("kilograms", { required: true })} />
+                <input
+                  placeholder="Enter you weight"
+                  className="px-3 text-sm py-3 rounded-lg border border-borderLight"
+                  type="number"
+                  name="kilograms"
+                  id="kilograms"
+                  {...register("kilograms", { required: true })}
+                />
               </div>
             </div>
           </CommonQuestionBox>
-       
           <CommonQuestionBox question={"5. What is your Blood Pressure?"}>
-            <div className="flex items-center gap-4">
+            <div
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className="flex items-center gap-4"
+            >
               <div>
                 <input
                   className="peer hidden"
@@ -197,7 +224,7 @@ function AssessmentPage() {
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
                   htmlFor="blood-pressure-low"
                 >
-                 Low (below 90/60)
+                  Low (below 90/60)
                 </label>
               </div>
               <div>
@@ -214,7 +241,6 @@ function AssessmentPage() {
                   htmlFor="blood-pressure-normal"
                 >
                   Normal (between 90/60 ad 140/90)
-
                 </label>
               </div>
               <div>
@@ -235,13 +261,16 @@ function AssessmentPage() {
               </div>
             </div>
           </CommonQuestionBox>
-
           <CommonQuestionBox
             question={
               "2. Would you like us to inform your GP or doctor about this consultation and any prescribed treatments? (A yes response is required for weight loss medication)"
             }
           >
-            <div className="flex flex-col space-y-5">
+            <div
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className="flex flex-col space-y-5"
+            >
               <div className="flex items-center gap-4">
                 <div>
                   <input
@@ -278,22 +307,36 @@ function AssessmentPage() {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-subtitleText" htmlFor="">
-                Give us additional information please
+                  Give us additional information please
                 </label>
                 <textarea
                   className="rounded-xl h-20 resize-none border border-borderLight p-4 text-sm "
                   placeholder="Write here.."
                   name="gpDoctorConsultationAdditionalInfo"
                   id=""
-                  {...register("gpDoctorConsultationAdditionalInfo", { required: true })}
+                  {...register("gpDoctorConsultationAdditionalInfo", {
+                    required: true,
+                  })}
                 ></textarea>
               </div>
             </div>
           </CommonQuestionBox>
-
           <div className="flex items-center gap-4 pt-10">
-            <button type="submit" className="px-12 py-3.5 rounded-full text-white bg-[#FF6D2E]">Procced</button>
-            <button className="px-12 py-3.5 rounded-full text-primary  bg-[#EFF8FF]">Cancel</button>
+            <button
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              type="submit"
+              className="px-12 py-3.5 rounded-full text-white bg-[#FF6D2E]"
+            >
+              Procced
+            </button>
+            <button
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              className="px-12 py-3.5 rounded-full text-primary  bg-[#EFF8FF]"
+            >
+              Cancel
+            </button>
           </div>
         </form>
       </div>

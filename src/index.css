@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,6 +64,35 @@
 }
 
 @layer components {
+
+
+  .range-slider {
+    -webkit-appearance: none; /* Remove default styles */
+    width: 300px;
+    height: 6px;
+    background: #dfc606;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  /* Change the background on hover */
+  .range-slider:hover {
+    background: #def105;
+  }
+
+  /* Custom thumb */
+
+
+  /* Thumb hover effect */
+
+
+
+
+
+
+
   .menu-item {
     @apply text-[18px] font-semibold text-menuLinkColor duration-200 ease-in-out hover:text-primary;
   }

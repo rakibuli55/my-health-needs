@@ -91,6 +91,17 @@ function StepForm() {
             <span>Review and pay</span>
           </li>
           <li className={currentStep >= 3 ? "active" : ""}>
+      <div data-aos="zoom-up" data-aos-duration="1000" className="relative  z-[1] w-[790px] mx-auto">
+        <ul  className="step-indicators flex items-center justify-between">
+          <li data-aos="zoom-up" data-aos-duration="2000">
+            <p className="icon">1</p>
+            <span>Delivery</span>
+          </li>
+          <li data-aos="zoom-up" data-aos-duration="2000">
+            <p className="icon">2</p>
+            <span>Review and pay</span>
+          </li>
+          <li data-aos="zoom-up" data-aos-duration="2000">
             <p className="icon">3</p>
             <span>Receipt</span>
           </li>
@@ -144,10 +155,39 @@ function StepForm() {
                   />
                 </div>
                 {errors?.email && <p>{errors.email}</p>}
+        <div className="step-one">
+          {/* step title */}
+          <div className="w-[882px] mx-auto text-center my-[100px]">
+            <h3 data-aos="zoom-up" data-aos-duration="2000" className="text--xl mb-[60px]">
+              Where should we deliver your order?
+            </h3>
+            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)]">
+              We ensure all packages are shipped in discreet, plain packaging
+              with no mention of MyHealthNeedsLondon, guaranteeing your privacy.
+            </p>
+            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)] mt-[30px]">
+              In the next step, you can select your preferred delivery method.
+              For now, please provide your delivery address to proceed.
+            </p>
+          </div>
+          {/* name & email  */}
+          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-2 gap-10">
+            {/* name  */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
+              <div>
+                <label data-aos="zoom-in" data-aos-duration="2000" htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="write your name"
+                  {...register("name", { required: "Name is required" })}
+                />
               </div>
             </div>
             {/* billing address  */}
             <div className="mt-[60px]">
+            {/* email  */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
                 <label htmlFor="email">Billing address</label>
                 <textarea
@@ -252,6 +292,45 @@ function StepForm() {
                         )}
                       </UploadButton>
                     )}
+              {errors?.email && <p>{errors.email}</p>}
+            </div>
+          </div>
+          {/* billing address  */}
+          <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
+            <div>
+              <label htmlFor="email">Billing address</label>
+              <textarea
+                name="billingAddress"
+                {...register("billingAddress", {
+                  required: "Billing Address is required",
+                })}
+                placeholder="Address"
+              ></textarea>
+            </div>
+            {errors?.billingAddress && <p>{errors.billingAddress}</p>}
+            {/* find location  */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-10 w-fit mx-auto cursor-pointer">
+              <div className="flex items-center gap-2 text-[20px] font-medium text-white bg-primary rounded-[10px] py-4 px-6">
+                <p className="text-[24px]">
+                  <CiLocationOn />
+                </p>
+                Find my address
+              </div>
+            </div>
+          </div>
+          {/* contact, city & post code  */}
+          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-3 gap-10">
+            {/* contact  */}
+            <div className="mt-[60px]">
+              <label htmlFor="contact">Contact</label>
+              <Controller
+                control={control}
+                name="phone"
+                render={({ field }) => (
+                  <PhoneInput
+                    country={"us"}
+                    value={field.value}
+                    onChange={(phone) => field.onChange(phone)}
                   />
                 </div>
               </div>
@@ -274,6 +353,10 @@ function StepForm() {
               </div>
               {/* Royal Mail Tracked */}
               <div className="mt-[100px] royalmail-radio-wrap">
+            {/* city  */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
+              <div>
+                <label htmlFor="city">City</label>
                 <input
                   className="hidden"
                   id="royalMail"
@@ -303,6 +386,18 @@ function StepForm() {
                 onClick={handleNext}
               >
                 Continue to payment
+            {/* post code  */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
+              <div>
+                <label htmlFor="email">Postcode</label>
+                <input
+                  type="number"
+                  name="postcode"
+                  placeholder="Postcode"
+                  {...register("postcode", {
+                    required: "Postcode is required",
+                  })}
+                />
               </div>
             </div>
           </div>
@@ -316,6 +411,10 @@ function StepForm() {
               <h3 className="text--xl mb-5 text-primryDark">
                 Check your order
               </h3>
+          {/* delivery information  */}
+          <div>
+            <div data-aos="zoom-in" data-aos-duration="2000" className="text-center w-[882px] mx-auto mt-[172px]">
+              <h3 className="text--xl mb-5">Delivery Information</h3>
               <p className="text-[24px] text-primary">
                 Check your order details and Enter promo code if you have one.
               </p>
@@ -427,6 +526,11 @@ function StepForm() {
             {/* agreements  */}
             <div className="mt-[100px] agreement">
               <input
+            {/* Royal Mail Tracked */}
+            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[100px] royalmail-radio-wrap">
+              <input
+                className="hidden"
+                id="royalMail"
                 type="checkbox"
                 name="deliveryAgreements"
                 id="deliveryAgreements"
@@ -460,6 +564,16 @@ function StepForm() {
                   <img className="w-[96px] h-[33px]" src={PaypalIcon} alt="" />
                 </Link>
               </div>
+                <div data-aos="zoom-in" data-aos-duration="2000" className="w-[800px]">
+                  <h4 className="text-[24px] font-semibold text-primryDark mb-[10px]">
+                    Royal Mail Tracked™
+                  </h4>
+                  <p>
+                    Estimated delivery: 1–2 working days after prescription
+                    approval Signature required upon delivery
+                  </p>
+                </div>
+              </label>
             </div>
           </div>
         )}

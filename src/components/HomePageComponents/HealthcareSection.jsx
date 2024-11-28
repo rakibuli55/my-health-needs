@@ -27,13 +27,15 @@ function HealthcareSection() {
         <div className='py-[140px] bg-primryDark rounded-[40px]'>
             <div className='container'>
                 {/* section title  */}
-                <div className='text-center'>
+                <div data-aos="zoom-up"
+                            data-aos-duration="1000" className='text-center'>
                     <h3 className='text--xl text-white w-[60%] mx-auto'>Quick, Confidential, and Reliable Healthcare</h3>
                 </div>
                 <div className='grid grid-cols-3 gap-[16px]'>
                     {
                         healthcareData.map((item) => (
-                            <div key={item.id} className='mt-10'>
+                            <div data-aos="zoom-in"
+                            data-aos-duration="2000" key={item.id} className='mt-10'>
                                 <HealthCard item={item} />
                             </div>
                         ))

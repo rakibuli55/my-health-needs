@@ -7,15 +7,19 @@ const myStyles = {
   activeFillColor: "#222E48",
   inactiveFillColor: "#FFC700",
   itemStrokeWidth: 2,
-  activeStrokeColor: '#222E48',
-  inactiveStrokeColor: '#222E48',
+  activeStrokeColor: "#222E48",
+  inactiveStrokeColor: "#222E48",
 };
 
 function AverageReviews() {
   return (
-    <div className="flex gap-12 w-full items-center py-8 border-b border-dashed border-t ">
-      
-      <div className="bg-[#FFC700] border rounded-xl flex-col p-6 flex justify-center items-center border-[#000000]">
+    <div data-aos="zoom-up"
+    data-aos-duration="2000" className="flex gap-12 w-full items-center py-8 border-b border-dashed border-t ">
+      <div
+        data-aos="zoom-up"
+        data-aos-duration="2000"
+        className="bg-[#FFC700] border rounded-xl flex-col p-6 flex justify-center items-center border-[#000000]"
+      >
         <h3 className="text-4xl font-bold pb-2">4</h3>
         <div>
           <Rating
@@ -28,7 +32,11 @@ function AverageReviews() {
         </div>
         <p className="text-lg font-bold pt-4">26 Rating</p>
       </div>
-      <div className="flex flex-col w-full gap-2">
+      <div
+        data-aos="zoom-up"
+        data-aos-duration="2000"
+        className="flex flex-col w-full gap-2"
+      >
         <div className="w-full flex gap-2 items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +50,7 @@ function AverageReviews() {
               fill="#FFC700"
             />
           </svg>
-          <span className="text-[#404A60] " >5</span>
+          <span className="text-[#404A60] ">5</span>
           <div className="w-full flex items-center">
             <div className="w-[90%] bg-[#FFC700] h-3 rounded-l-lg"></div>
             <div className="w-[10%] bg-[#EBECEF] h-3 rounded-r-lg"></div>
@@ -50,7 +58,7 @@ function AverageReviews() {
           <span className="w-6">90%</span>
         </div>
         <div className="w-full gap-2 flex items-center">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"
@@ -70,7 +78,7 @@ function AverageReviews() {
           <span className="w-6">75%</span>
         </div>
         <div className="w-full gap-2 flex items-center">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"
@@ -90,7 +98,7 @@ function AverageReviews() {
           <span className="w-6">60%</span>
         </div>
         <div className="w-full gap-2 flex items-center">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"
@@ -110,7 +118,7 @@ function AverageReviews() {
           <span className="w-6">20%</span>
         </div>
         <div className="w-full gap-2 flex items-center">
-        <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="12"

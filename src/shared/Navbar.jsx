@@ -22,36 +22,47 @@ function Navbar() {
         <div className="flex items-center gap-10">
           {/* logo  */}
           <div>
+         
             <Link to={"/"}>
-              <img className="h-[70px] w-[70px]" src={Logo} alt="Logo" />
+              <img  data-aos="zoom-up"
+          data-aos-duration="2000" className="h-[70px] w-[70px]" src={Logo} alt="Logo" />
             </Link>
           </div>
           {/* menus  */}
           <ul className="flex items-center gap-[30px]">
-            <li>
+            <li data-aos="zoom-up"
+          data-aos-duration="2000">
               <NavLink to={"/service"} className="menu-item">
                 HealthCare Service
               </NavLink>
             </li>
             <li>
               <NavLink to={"/howitworks"} className="menu-item">
+            <li data-aos="zoom-up"
+          data-aos-duration="2000">
+              <NavLink to={"/how-it-works"} className="menu-item">
                 How it works
               </NavLink>
             </li>
-            <li>
+            <li data-aos="zoom-up"
+          data-aos-duration="2000">
               <NavLink to={"/faq"} className="menu-item">
                 FAQ
               </NavLink>
             </li>
             <li>
               <NavLink to={"/auth/login"} className="menu-item">
+            <li data-aos="zoom-up"
+          data-aos-duration="2000">
+              <NavLink to={"/login"} className="menu-item">
                 Login
               </NavLink>
             </li>
           </ul>
         </div>
         {/* header right  */}
-        <div className="flex items-center gap-[18px]">
+        <div data-aos="zoom-left"
+                  data-aos-duration="2000" className="flex items-center gap-[18px]">
           {/* search  */}
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -72,7 +83,8 @@ function Navbar() {
             </button>
           </form>
           {/* cart  */}
-          <div>
+          <div data-aos="zoom-left"
+                  data-aos-duration="2000">
             <Link to='/dashboard/user-homepage' className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-full">
               <img className="w-7 h-7" src={CartIcon} alt={CartIcon} />
             </Link>
@@ -80,6 +92,9 @@ function Navbar() {
           {/* header btn  */}
           <div>
             <Link to={"/auth/signup"}>
+          <div    data-aos="zoom-left"
+                  data-aos-duration="2000">
+            <Link to={"/"}>
               <HeaderBtn text="Sign Up" />
             </Link>
           </div>

@@ -11,18 +11,18 @@ function LoginPage() {
 
 
   return (
-    <div className="min-h-[800px] flex justify-center items-center">
+    <div  className="min-h-[800px] flex justify-center items-center">
       <div className="container w-4/12">
-        <div>
-          <h3 className="text-4xl font-bold pb-2 text-[#232323]">Sign in</h3>
-          <p className="text-[#969696]">
+        <div data-aos="zoom-up" data-aos-duration="2000">
+          <h3 data-aos="zoom-up" data-aos-duration="2000" className="text-4xl font-bold pb-2 text-[#232323]">Sign in</h3>
+          <p data-aos="zoom-up" data-aos-duration="2000" className="text-[#969696]">
             Please login to continue to your account.
           </p>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} action="">
+        <form  onSubmit={handleSubmit(onSubmit)} action="">
           {/* input */}
           <div className="bg-white pt-4 space-y-6 rounded-lg">
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type="email"
                 id="email"
@@ -38,7 +38,7 @@ function LoginPage() {
                 Email
               </label>
             </div>
-            <div className="relative bg-inherit">
+            <div data-aos="zoom-up" data-aos-duration="2000" className="relative bg-inherit">
               <input
                 type={toggle ? "password" : "text"}
                 id="password"
@@ -69,7 +69,7 @@ function LoginPage() {
             </div>
           </div>
           {/* checkbox */}
-          <div className="flex items-center gap-2 pt-4">
+          <div data-aos="zoom-up" data-aos-duration="2000" className="flex items-center gap-2 pt-4">
             <input
               className="appearance-none relative rounded-sm border w-6 h-6 after:content-['✔'] after:text-white after:font-bold after:absolute after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 bg-transparent checked:bg-blue-500"
               type="checkbox"
@@ -79,20 +79,20 @@ function LoginPage() {
             <label htmlFor="">Keep me logged in</label>
           </div>
           {/* button */}
-          <div className="pt-6">
+          <div data-aos="zoom-up" data-aos-duration="2000" className="pt-6">
             <button className="bg-primary text-white font-semibold w-full py-4 rounded-lg">
               Sign In
             </button>
           </div>
         </form>
 
-        <div className="flex items-center py-5 gap-2 w-full">
+        <div data-aos="zoom-up" data-aos-duration="2000" className="flex items-center py-5 gap-2 w-full">
           <div className="flex-1 border border-[#D9D9D9]"></div>
           <span className="text-[#6E6E6E]">or</span>
           <div className="flex-1 border border-[#D9D9D9]"></div>
         </div>
 
-        <div className=" w-full">
+        <div data-aos="zoom-up" data-aos-duration="2000" className=" w-full">
           <button className="flex w-full justify-center py-4 border rounded-lg items-center gap-3">
             <h4 className="text-lg font-semibold text-[#232323]">
               Sign in with Google
@@ -132,13 +132,13 @@ function LoginPage() {
           </button>
         </div>
 
-        <div className="flex justify-center items-center pt-5">
+        <div data-aos="zoom-up" data-aos-duration="2000" className="flex justify-center items-center pt-5">
             <h4 className="text-[#6C6C6C]">Need an account?  <Link to={'/auth/signup'} className="text-[#367AFF] font-medium">Create one</Link></h4>
         </div>
       </div>
 
-      <div className="w-7/12 p-20">
-      <img className="w-full" src="https://i.ibb.co.com/1RHw2mj/aa0ada24ef439cbe3b561d248f33efd6.png" alt="" />
+      <div data-aos="zoom-up" data-aos-duration="2000" className="w-7/12 p-20">
+      <img data-aos="zoom-in" data-aos-duration="2000" className="w-full" src="https://i.ibb.co.com/1RHw2mj/aa0ada24ef439cbe3b561d248f33efd6.png" alt="" />
 
       </div>
     </div>

@@ -4,6 +4,8 @@ function InnerSection({ bgImg, service }) {
   return (
     <section className="px-9 mt-10">
       <div
+      data-aos="zoom-up"
+                  data-aos-duration="2000"
         className=" bg-no-repeat py-[218px] rounded-[20px] bg-cover"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
@@ -11,7 +13,8 @@ function InnerSection({ bgImg, service }) {
           <h1 className="text-[76px] font-bold leading-normal text-menuLinkColor text-center">
             {service}
           </h1>
-          <div className="text-center">
+          <div data-aos="zoom-left"
+                  data-aos-duration="2000" className="text-center">
             <Breadcrumb />
           </div>
         </div>

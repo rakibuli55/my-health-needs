@@ -41,30 +41,35 @@ function MedicineDetails() {
   };
 
   return (
-    <div className="p-14 rounded-xl bg-[#EFF8FF]">
+    <div data-aos="zoom-up"
+    data-aos-duration="2000" className="p-14 rounded-xl bg-[#EFF8FF]">
       <div className="grid grid-cols-2 gap-24 items-center">
         {/* image container */}
         <div className="flex flex-col gap-6">
-          <div className="w-full h-[500px] p-8 bg-white rounded-lg overflow-hidden">
+          <div className="p-8 bg-white">
+          <div className="w-full  h-[500px]  bg-white rounded-lg overflow-hidden">
             <img
-              className="w-full rounded-lg h-full object-cover "
+              className="w-full hover:scale-110  duration-300 rounded-lg h-full object-cover "
               src={preview}
               alt=""
             />
           </div>
+          </div>
           <div className="grid grid-cols-3 gap-6 ">
             {images.map((img, index) => (
-              <div
+              <div key={index} className="p-4 bg-white">
+                <div
                 onClick={() => handlePreview(img.img_url)}
                 key={index}
-                className="h-[200px] cursor-pointer p-4 bg-white object-cover rounded-lg overflow-hidden"
+                className="h-[200px] cursor-pointer  bg-white object-cover rounded-lg overflow-hidden"
               >
                 {" "}
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full hover:scale-110 duration-300 h-full object-cover rounded-lg"
                   src={img.img_url}
                   alt=""
                 />{" "}
+              </div>
               </div>
             ))}
           </div>

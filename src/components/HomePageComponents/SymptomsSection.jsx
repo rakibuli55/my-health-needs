@@ -33,14 +33,16 @@ function SymptomsSection() {
     <section className="py-[140px]">
         <div className="container">
             {/* section-title  */}
-            <div className="flex items-center justify-between">
+            <div  data-aos="zoom-in"
+                data-aos-duration="1000" className="flex items-center justify-between">
                 <h2 className="text--xl">25+ Symptoms Specialities</h2>
                 <Link to={'/'} className="text-[24px] font-semibold text-[#01548B]">See All Specialties</Link>
             </div>
             <div className="grid grid-cols-4 gap-5">
                 {
                     symptomsData.map((item) => (
-                        <div key={item.id} className="mt-10">
+                        <div  data-aos="zoom-in"
+                        data-aos-duration="2000" key={item.id} className="mt-10">
                             <SymptomCard item={item} />
                         </div>
                     ))

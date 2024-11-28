@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import { DashboardUserSvg } from './../components/SvgContainer/SvgContainer';
 import DashboardHeader from '@/components/Dashboard/Header/DashboardHeader';
 import DashboardSidebar from '@/components/Dashboard/Sidebar/DashboardSidebar';
+import AosProvider from '@/provider/Aos/AosProvider';
 
 const DashboardLayout = () => {
   const userDashboardNavLinks = [
@@ -33,7 +34,8 @@ const DashboardLayout = () => {
   ];
 
   return (
-    <div className="min-h-screen max-h-screen flex overflow-hidden font-nunito">
+    <AosProvider>
+      <div className="min-h-screen max-h-screen flex overflow-hidden font-nunito">
       {/* sidebar */}
       <DashboardSidebar userDashboardNavLinks={userDashboardNavLinks} />
 
@@ -48,6 +50,7 @@ const DashboardLayout = () => {
         </div>
       </div>
     </div>
+    </AosProvider>
   );
 };
 

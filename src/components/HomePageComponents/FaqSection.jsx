@@ -44,12 +44,14 @@ function FaqSection() {
       <div className="container">
         {/* section title  */}
         <div className="mb-10">
-          <h3 className="text--xl text-center">Frequently Asked Questions</h3>
+          <h3 data-aos="zoom-up"
+                  data-aos-duration="2000" className="text--xl text-center">Frequently Asked Questions</h3>
         </div>
         <div>
           <Accordion type="single" collapsible className="w-full">
             {faqData.map((item, index) => (
-              <AccordionItem key={item.id} value={`item-${index}`} className="border border-[#084772] rounded-[10px] overflow-hidden mt-[14px] accordion-item">
+              <AccordionItem data-aos="zoom-in"
+              data-aos-duration="2000" key={item.id} value={`item-${index}`} className="border border-[#084772] rounded-[10px] overflow-hidden mt-[14px] accordion-item">
                 <AccordionTrigger className="text-[32px] text-menuLinkColor font-semibold py-5 px-[50px] bg-headerBg">{item.question}</AccordionTrigger>
                 <AccordionContent className="pt-5 pb-8 px-[55px] bg-white text-[24px] leading-[40px]">
                   {item.answer}

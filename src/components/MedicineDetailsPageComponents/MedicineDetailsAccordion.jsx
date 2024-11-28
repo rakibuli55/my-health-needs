@@ -7,7 +7,8 @@ import {
 
 function MedicineDetailsAccordion() {
   return (
-    <div className="py-24">
+    <div data-aos="zoom-up"
+    data-aos-duration="2000" className="py-24">
       <Accordion className="space-y-2" type="single" collapsible>
         <AccordionItem  value="item-1" className={'border-b-0'}>
           <AccordionTrigger className={'bg-[#EFF8FF]  px-4 py-4 hover:no-underline rounded-t-lg text-2xl font-semibold text-[#062C4B]'}>How do I know if this supplement is right for me?</AccordionTrigger>

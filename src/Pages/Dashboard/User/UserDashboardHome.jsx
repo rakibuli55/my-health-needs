@@ -103,8 +103,8 @@ const UserDashboardHome = () => {
     <div>
       {/* user stats */}
       <div className="grid grid-cols-3 gap-8">
-        {userStats?.map((stat) => (
-          <UserStatCard key={stat} stat={stat} />
+        {userStats?.map((stat,idx) => (
+          <UserStatCard key={idx} stat={stat} />
         ))}
       </div>
 

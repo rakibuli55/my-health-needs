@@ -188,7 +188,7 @@
   }
   .royalmail-radio-wrap input:checked + label::after{
     content: '';
-    @apply h-6 w-6 bg-primryDark left-[48px] 
+    @apply h-6 w-6 bg-primryDark left-[48px]
   }
 }
 
@@ -234,4 +234,15 @@
 }
 .custom_scrollbar::-webkit-scrollbar-thumb:vertical:hover {
   background: #1ca8cb;
+}
+
+
+/* Custom CSS to hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }

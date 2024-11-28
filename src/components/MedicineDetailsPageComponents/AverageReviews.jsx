@@ -13,7 +13,8 @@ const myStyles = {
 
 function AverageReviews() {
   return (
-    <div className="flex gap-12 w-full items-center">
+    <div className="flex gap-12 w-full items-center py-8 border-b border-dashed border-t ">
+      
       <div className="bg-[#FFC700] border rounded-xl flex-col p-6 flex justify-center items-center border-[#000000]">
         <h3 className="text-4xl font-bold pb-2">4</h3>
         <div>

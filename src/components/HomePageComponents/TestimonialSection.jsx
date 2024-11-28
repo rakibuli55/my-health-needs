@@ -7,13 +7,6 @@ const testimonialData = [
     clientName: "Pauline",
   },
   {
-    id: 1,
-    message:
-      "“The company keeps in touch and is very helpful if the customer has any concerns.”",
-    imgUrl: "https://i.ibb.co.com/RzBj57y/Ellipse-1988.png",
-    clientName: "Pauline",
-  },
-  {
     id: 2,
     message:
       "“The company keeps in touch and is very helpful if the customer has any concerns.”",
@@ -50,6 +43,13 @@ const testimonialData = [
   },
   {
     id: 7,
+    message:
+      "“The company keeps in touch and is very helpful if the customer has any concerns.”",
+    imgUrl: "https://i.ibb.co.com/RzBj57y/Ellipse-1988.png",
+    clientName: "Pauline",
+  },
+  {
+    id: 8,
     message:
       "“The company keeps in touch and is very helpful if the customer has any concerns.”",
     imgUrl: "https://i.ibb.co.com/RzBj57y/Ellipse-1988.png",

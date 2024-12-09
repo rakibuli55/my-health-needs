@@ -1,19 +1,24 @@
-import CommonQuestionBox from "@/components/AssessmentPageComponents/CommonQuestionBox";
-import FormHeader from "@/components/AssessmentPageComponents/FormHeader";
-import { useNavigate, useParams } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import InnerSection from "@/components/Common/InnerSection";
-import assesmentBg from "../assets/images/assesment-bg.png"
+import CommonQuestionBox from '@/components/AssessmentPageComponents/CommonQuestionBox';
+import FormHeader from '@/components/AssessmentPageComponents/FormHeader';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import InnerSection from '@/components/Common/InnerSection';
+import assesmentBg from '../assets/images/assesment-bg.png';
 
 function AssessmentPage() {
   const { name } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // hook form
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => {
+    console.log(data);
     navigate('/medicine-details');
-  }
+  };
 
   return (
     <div className="font-dmsans">
@@ -21,21 +26,17 @@ function AssessmentPage() {
       <div data-aos="zoom-up" data-aos-duration="2000" className="container ">
         <FormHeader></FormHeader>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          action=""
-          className="py-14 space-y-2.5"
-        >
-          <CommonQuestionBox question={"1. What is your biological sex?"}>
+        <form onSubmit={handleSubmit(onSubmit)} className="py-14 space-y-2.5">
+          <CommonQuestionBox question={'1. What is your biological sex?'}>
             <div className="flex items-center gap-4">
               <div>
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"male"}
+                  value={'male'}
                   name="sex"
                   id="male"
-                  {...register("sex", { required: true })}
+                  {...register('sex', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -48,10 +49,10 @@ function AssessmentPage() {
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"female"}
+                  value={'female'}
                   name="sex"
                   id="female"
-                  {...register("sex", { required: true })}
+                  {...register('sex', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -64,10 +65,10 @@ function AssessmentPage() {
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"others"}
+                  value={'others'}
                   name="sex"
                   id="others"
-                  {...register("sex", { required: true })}
+                  {...register('sex', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -80,7 +81,7 @@ function AssessmentPage() {
           </CommonQuestionBox>
           <CommonQuestionBox
             question={
-              "2. Do you believe you have the ability to make healthcare decisions for yourself?"
+              '2. Do you believe you have the ability to make healthcare decisions for yourself?'
             }
           >
             <div
@@ -93,10 +94,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"yes"}
+                    value={'yes'}
                     name="ability"
                     id="ability-yes"
-                    {...register("ability", { required: true })}
+                    {...register('ability', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -109,10 +110,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"no"}
+                    value={'no'}
                     name="ability"
                     id="ability-no"
-                    {...register("ability", { required: true })}
+                    {...register('ability', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -135,14 +136,14 @@ function AssessmentPage() {
                   placeholder="Write here.."
                   name="abilityAdditionalInfo"
                   id=""
-                  {...register("abilityAdditionalInfo", { required: true })}
+                  {...register('abilityAdditionalInfo', { required: true })}
                 ></textarea>
               </div>
             </div>
           </CommonQuestionBox>
           <CommonQuestionBox
             question={
-              "3. Are you taking any medications currently? This includes both prescription-only and over-the-counter medications, as well as homoeopathic remedies."
+              '3. Are you taking any medications currently? This includes both prescription-only and over-the-counter medications, as well as homoeopathic remedies.'
             }
           >
             <div
@@ -155,10 +156,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"yes"}
+                    value={'yes'}
                     name="currentlyUse"
                     id="currentlyUse-yes"
-                    {...register("currentlyUse", { required: true })}
+                    {...register('currentlyUse', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -171,10 +172,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"no"}
+                    value={'no'}
                     name="currentlyUse"
                     id="currentlyUse-no"
-                    {...register("currentlyUse", { required: true })}
+                    {...register('currentlyUse', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -186,7 +187,7 @@ function AssessmentPage() {
               </div>
             </div>
           </CommonQuestionBox>
-          <CommonQuestionBox question={"2. How much do you weight?"}>
+          <CommonQuestionBox question={'2. How much do you weight?'}>
             <div
               data-aos="zoom-up"
               data-aos-duration="2000"
@@ -202,12 +203,12 @@ function AssessmentPage() {
                   type="number"
                   name="kilograms"
                   id="kilograms"
-                  {...register("kilograms", { required: true })}
+                  {...register('kilograms', { required: true })}
                 />
               </div>
             </div>
           </CommonQuestionBox>
-          <CommonQuestionBox question={"5. What is your Blood Pressure?"}>
+          <CommonQuestionBox question={'5. What is your Blood Pressure?'}>
             <div
               data-aos="zoom-up"
               data-aos-duration="2000"
@@ -217,10 +218,10 @@ function AssessmentPage() {
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"low"}
+                  value={'low'}
                   name="bloodPressure"
                   id="blood-pressure-low"
-                  {...register("bloodPressure", { required: true })}
+                  {...register('bloodPressure', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -233,10 +234,10 @@ function AssessmentPage() {
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"normal"}
+                  value={'normal'}
                   name="bloodPressure"
                   id="blood-pressure-normal"
-                  {...register("bloodPressure", { required: true })}
+                  {...register('bloodPressure', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -249,10 +250,10 @@ function AssessmentPage() {
                 <input
                   className="peer hidden"
                   type="radio"
-                  value={"high)"}
+                  value={'high)'}
                   name="bloodPressure"
                   id="blood-pressure-high"
-                  {...register("bloodPressure", { required: true })}
+                  {...register('bloodPressure', { required: true })}
                 />
                 <label
                   className="px-4 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-2 text-primary rounded-full bg-[#DEF0FF] "
@@ -265,7 +266,7 @@ function AssessmentPage() {
           </CommonQuestionBox>
           <CommonQuestionBox
             question={
-              "2. Would you like us to inform your GP or doctor about this consultation and any prescribed treatments? (A yes response is required for weight loss medication)"
+              '2. Would you like us to inform your GP or doctor about this consultation and any prescribed treatments? (A yes response is required for weight loss medication)'
             }
           >
             <div
@@ -278,10 +279,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"yes"}
+                    value={'yes'}
                     name="gpDoctorConsultation"
                     id="gp-doctor-consultation-yes"
-                    {...register("gpDoctorConsultation", { required: true })}
+                    {...register('gpDoctorConsultation', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -294,10 +295,10 @@ function AssessmentPage() {
                   <input
                     className="peer hidden"
                     type="radio"
-                    value={"no"}
+                    value={'no'}
                     name="gpDoctorConsultation"
                     id="gp-doctor-consultation-no"
-                    {...register("gpDoctorConsultation", { required: true })}
+                    {...register('gpDoctorConsultation', { required: true })}
                   />
                   <label
                     className="px-6 cursor-pointer peer-checked:bg-primary peer-checked:text-white py-1.5 text-primary rounded-full bg-[#DEF0FF] "
@@ -316,7 +317,7 @@ function AssessmentPage() {
                   placeholder="Write here.."
                   name="gpDoctorConsultationAdditionalInfo"
                   id=""
-                  {...register("gpDoctorConsultationAdditionalInfo", {
+                  {...register('gpDoctorConsultationAdditionalInfo', {
                     required: true,
                   })}
                 ></textarea>
@@ -330,7 +331,7 @@ function AssessmentPage() {
               type="submit"
               className="px-12 py-3.5 rounded-full text-white bg-[#FF6D2E]"
             >
-              Procced
+              Proceed
             </button>
             <button
               data-aos="zoom-in"

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @tailwind base;
 @tailwind components;
@@ -200,11 +200,11 @@
   }
   .royalmail-radio-wrap label::before,
   .royalMail-radio::after {
-    content: "";
+    content: '';
     @apply absolute h-10 w-10 top-1/2 translate-y-[-50%] left-10 bg-white rounded-full border border-[rgba(0,0,0,0.5)];
   }
   .royalmail-radio-wrap input:checked + label::after {
-    content: "";
+    content: '';
     @apply h-6 w-6 bg-primryDark left-[48px];
   }
   .treatment-preference-medicine li {
@@ -220,11 +220,11 @@
     @apply relative;
   }
   .checkout-stepform .setp-two label:before {
-    content: "";
+    content: '';
     @apply absolute top-[30px] left-10 h-[34px] w-[34px] bg-white border border-[rgba(0,0,0,0.6)] rounded-[4px];
   }
   .checkout-stepform .setp-two input:checked + label:after {
-    content: "";
+    content: '';
     @apply absolute top-[35px] left-[47px] w-[9px] h-[18px] border-primryDark;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
@@ -246,7 +246,7 @@
     @apply border-none;
   }
 
-  .royalmail-radio-wrap input:checked + label::after{
+  .royalmail-radio-wrap input:checked + label::after {
     content: '';
     @apply h-6 w-6 bg-primryDark left-[48px];
   }
@@ -254,7 +254,6 @@
     @apply text-[20px] py-5 px-10 bg-primary text-white font-semibold rounded-[10px];
   }
 }
-
 
 .swiper-wrapper {
   padding-bottom: 50px !important;
@@ -300,7 +299,6 @@
   background: #1ca8cb;
 }
 
-
 /* Custom CSS to hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -309,4 +307,12 @@
 .scrollbar-hide {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+}
+
+.user-assessment-result::-webkit-scrollbar {
+  display: none;
+}
+.user-assessment-result {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

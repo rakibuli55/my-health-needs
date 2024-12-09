@@ -1,10 +1,14 @@
+import FeedbackModal from '@/components/Modals/FeedbackModal';
+import { Modal } from '@/components/Modals/Modal';
 import {
   FeedbackSvg,
   PrintSvg,
   RightArrowSvg,
 } from '@/components/SvgContainer/SvgContainer';
+import { useState } from 'react';
 
 const UserOrderDetails = () => {
+  const [open, setOpen] = useState(false);
   const medicineInfo = [
     {
       name: 'Paracetamol',
@@ -44,7 +48,10 @@ const UserOrderDetails = () => {
             </button>
 
             {/* feedback btn */}
-            <button className="px-8 py-3 rounded-full bg-[#FF963A] text-white flex items-center justify-center gap-2">
+            <button
+              onClick={() => setOpen(true)}
+              className="px-8 py-3 rounded-full bg-[#FF963A] text-white flex items-center justify-center gap-2"
+            >
               <FeedbackSvg /> <span>Give a Feedback</span>
             </button>
           </div>
@@ -113,8 +120,8 @@ const UserOrderDetails = () => {
           {/* title */}
           <h2 className="font-bold text-lg">Doctor Notes</h2>
           {/* note */}
-          <div className='mt-3'>
-            <p className='p-5 rounded-xl border border-black/20 text-black/60'>
+          <div className="mt-3">
+            <p className="p-5 rounded-xl border border-black/20 text-black/60">
               Lorem ipsum dolor sit amet consectetur. Pellentesque tincidunt
               dignissim sed nulla proin dignissim a varius in. Tortor massa
               pharetra orci purus at amet tortor nisl diam. Massa ut ut nibh
@@ -124,6 +131,12 @@ const UserOrderDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+
+      <Modal open={open} setOpen={setOpen}>
+        <FeedbackModal setOpen={setOpen} />
+      </Modal>
     </section>
   );
 };

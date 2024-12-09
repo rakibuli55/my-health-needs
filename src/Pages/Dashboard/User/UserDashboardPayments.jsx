@@ -1,81 +1,38 @@
-import DashboardTable from '@/components/Dashboard/Table/DashboardTable';
 import DashboardTitle from '@/components/Dashboard/User/DashboardTitle';
+import PaymentCard from './PaymentCard';
+import { AddIconSvg } from '@/components/SvgContainer/SvgContainer';
+import { useState } from 'react';
+import { Modal } from '@/components/Modals/Modal';
+import AddPaymentModal from '@/components/Modals/AddPaymentModal';
 
 const UserDashboardPayments = () => {
-  const payments = [
-    {
-      paymentId: '#2323',
-      amount: 350,
-      date: '22/11/24',
-      paymentMethod: 'Credit Card',
-    },
-    {
-      paymentId: '#2324',
-      amount: 500,
-      date: '23/11/24',
-      paymentMethod: 'PayPal',
-    },
-    {
-      paymentId: '#2325',
-      amount: 750,
-      date: '24/11/24',
-      paymentMethod: 'Bank Transfer',
-    },
-    {
-      paymentId: '#2326',
-      amount: 120,
-      date: '25/11/24',
-      paymentMethod: 'Debit Card',
-    },
-    {
-      paymentId: '#2327',
-      amount: 300,
-      date: '26/11/24',
-      paymentMethod: 'Cash',
-    },
-    {
-      paymentId: '#2328',
-      amount: 450,
-      date: '27/11/24',
-      paymentMethod: 'Credit Card',
-    },
-    {
-      paymentId: '#2329',
-      amount: 600,
-      date: '28/11/24',
-      paymentMethod: 'PayPal',
-    },
-    {
-      paymentId: '#2330',
-      amount: 220,
-      date: '29/11/24',
-      paymentMethod: 'Google Pay',
-    },
-    {
-      paymentId: '#2331',
-      amount: 800,
-      date: '30/11/24',
-      paymentMethod: 'Apple Pay',
-    },
-    {
-      paymentId: '#2332',
-      amount: 1000,
-      date: '01/12/24',
-      paymentMethod: 'Bank Transfer',
-    },
-    {
-      paymentId: '#2333',
-      amount: 350,
-      date: '02/12/24',
-      paymentMethod: 'Cash',
-    },
-  ];
-
+  const [open, setOpen] = useState(false);
   return (
     <div className="  bg-white rounded-md px-16 py-10">
-      <DashboardTitle title="Payment History" />
+      <DashboardTitle title="My Payments" />
 
-      <DashboardTable orders={payments} />
+      {/* cards */}
+      <div className="mt-10 grid grid-cols-3 gap-12">
+        {/* card */}
+        <PaymentCard />
+        <PaymentCard />
+        <div className="h-72 bg-cover bg-center border border-black/20 bg-no-repeat font-dmsans rounded-2xl p-5 flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <div onClick={() => setOpen(true)} className="cursor-pointer">
+              <AddIconSvg />
+            </div>
+            <p className="font-nunito font-semibold text-lg">
+              Add Payment Method
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* modal */}
+
+      <Modal open={open} setOpen={setOpen}>
+        <AddPaymentModal setOpen={setOpen} />
+      </Modal>
     </div>
   );
 };

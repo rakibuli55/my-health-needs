@@ -309,7 +309,7 @@ const UserAssessmentResult = () => {
             {/* item */}
             <AccordionItem
               data-aos="zoom-in"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
               value={`item-1`}
               className="border border-[#084772] rounded-[10px] overflow-hidden mt-[14px] accordion-item"
             >

@@ -732,7 +732,7 @@ export function AssessmentSvg({ light }) {
     </svg>
   );
 }
-export function SubscriptionSvg({light}) {
+export function SubscriptionSvg({ light }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -833,6 +833,38 @@ export function ModalCloseBtn() {
             height="36"
             fill="white"
             transform="translate(0 0.5)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+export function AddIconSvg() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="42"
+      height="41"
+      viewBox="0 0 42 41"
+      fill="none"
+    >
+      <g clipPath="url(#clip0_5109_1764)">
+        <path
+          d="M21.2695 0C9.96514 0 0.769531 9.19561 0.769531 20.5C0.769531 31.8044 9.96514 41 21.2695 41C32.5739 41 41.7695 31.8028 41.7695 20.5C41.7695 9.19721 32.5739 0 21.2695 0ZM21.2695 37.8242C11.7182 37.8242 3.94535 30.0529 3.94535 20.5C3.94535 10.9471 11.7182 3.17582 21.2695 3.17582C30.8209 3.17582 38.5937 10.9471 38.5937 20.5C38.5937 30.0529 30.8225 37.8242 21.2695 37.8242Z"
+          fill="black"
+        />
+        <path
+          d="M29.2093 18.7697H22.8577V12.418C22.8577 11.5415 22.1479 10.8301 21.2697 10.8301C20.3916 10.8301 19.6818 11.5415 19.6818 12.418V18.7697H13.3301C12.452 18.7697 11.7422 19.4811 11.7422 20.3576C11.7422 21.2341 12.452 21.9456 13.3301 21.9456H19.6818V28.2972C19.6818 29.1737 20.3916 29.8851 21.2697 29.8851C22.1479 29.8851 22.8577 29.1737 22.8577 28.2972V21.9456H29.2093C30.0874 21.9456 30.7973 21.2341 30.7973 20.3576C30.7973 19.4811 30.0874 18.7697 29.2093 18.7697Z"
+          fill="black"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_5109_1764">
+          <rect
+            width="41"
+            height="41"
+            fill="white"
+            transform="translate(0.769531)"
           />
         </clipPath>
       </defs>

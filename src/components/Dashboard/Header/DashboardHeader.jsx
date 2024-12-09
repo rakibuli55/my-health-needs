@@ -4,7 +4,7 @@ import {
 } from '@/components/SvgContainer/SvgContainer';
 import { useRef, useState } from 'react';
 import DashboardNotificationsContainer from './DashboardNotificationsContainer';
-
+import user from "@/assets/images/user.png"
 const DashboardHeader = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const showNotificationsRef = useRef(null);
@@ -31,7 +31,7 @@ const DashboardHeader = () => {
         <div className="size-12 ">
           <img
             className="w-full h-full object-cover rounded-full"
-            src="https://i.postimg.cc/m2xPtgcd/user.png"
+            src={user}
             alt=""
           />
         </div>

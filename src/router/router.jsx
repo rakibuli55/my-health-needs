@@ -1,5 +1,3 @@
-
-
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -14,7 +12,6 @@ import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 import AssessmentPage from '@/Pages/AssessmentPage';
 import MedicineDetailsPage from '@/Pages/MedicineDetailsPage';
 import CheckoutPage from '@/Pages/CheckoutPage';
-import AssessmentPage from "@/Pages/AssessmentPage";
 import LoginPage from "@/Pages/Auth/LoginPage";
 import SignupPage from "@/Pages/Auth/SignupPage";
 import AuthLayout from "@/layout/AuthLayout";

@@ -3,9 +3,11 @@ import { Modal } from '@/components/Modals/Modal';
 import OrderDetailsModal from '@/components/Modals/OrderDetailsModal';
 import { ViewSvg } from '@/components/SvgContainer/SvgContainer';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
 const TableBody = ({ items, columns, action }) => {
+  const navigate=useNavigate()
   const [open, setOpen] = useState(false);
   const handleShowModal = () => {
     setOpen(true);
@@ -13,9 +15,9 @@ const TableBody = ({ items, columns, action }) => {
   return (
     <>
       {items?.map((item, idx) => (
-        <tr
+        <tr onClick={()=>navigate('/dashboard/user/order-details')}
           key={idx}
-          className="border-b text-sm md:text-base text-[#052D4C] font-medium "
+          className="border-y hover:bg-primary/20 transition duration-300 text-sm md:text-base text-[#052D4C] font-medium cursor-pointer"
         >
           {columns.map((column, colIdx) => (
             <td

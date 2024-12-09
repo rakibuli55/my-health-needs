@@ -23,7 +23,7 @@ const DashboardSidebar = ({ userDashboardNavLinks }) => {
       <DashboardSidebarNavLinks userDashboardNavLinks={userDashboardNavLinks} />
 
       {/* logout */}
-      <div className="mt-4 w-full flex gap-3 items-center px-6 py-3 rounded-2xl  group duration-500 transition hover:bg-activeColor cursor-pointer">
+      <div className="mt-4 w-full flex gap-3 items-center px-6 py-3 rounded-2xl group duration-500 transition hover:bg-[#0CA6FC] cursor-pointer">
         <DashboardLogoutSvg />
         <span
           className={`text-lg group-hover:text-white transition duration-500 text-textColor`}

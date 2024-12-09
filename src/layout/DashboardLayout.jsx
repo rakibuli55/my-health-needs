@@ -1,10 +1,14 @@
 import {
+  AssessmentSvg,
   DashboardHomeSvg,
   DashboardOrderSvg,
   DashboardPaymentSvg,
 } from '@/components/SvgContainer/SvgContainer';
 import { Outlet } from 'react-router-dom';
-import { DashboardUserSvg } from './../components/SvgContainer/SvgContainer';
+import {
+  DashboardUserSvg,
+  SubscriptionSvg,
+} from './../components/SvgContainer/SvgContainer';
 import DashboardHeader from '@/components/Dashboard/Header/DashboardHeader';
 import DashboardSidebar from '@/components/Dashboard/Sidebar/DashboardSidebar';
 import AosProvider from '@/provider/Aos/AosProvider';
@@ -22,9 +26,19 @@ const DashboardLayout = () => {
       icon: DashboardOrderSvg,
     },
     {
+      title: 'Assessment Result',
+      path: '/dashboard/user-assessment-result',
+      icon: AssessmentSvg,
+    },
+    {
       title: 'My Payments',
       path: '/dashboard/user-payments',
       icon: DashboardPaymentSvg,
+    },
+    {
+      title: 'My Subscription',
+      path: '/dashboard/user-subscription',
+      icon: SubscriptionSvg,
     },
     {
       title: 'My Profile',
@@ -36,20 +50,20 @@ const DashboardLayout = () => {
   return (
     <AosProvider>
       <div className="min-h-screen max-h-screen flex overflow-hidden font-nunito">
-      {/* sidebar */}
-      <DashboardSidebar userDashboardNavLinks={userDashboardNavLinks} />
+        {/* sidebar */}
+        <DashboardSidebar userDashboardNavLinks={userDashboardNavLinks} />
 
-      {/* dashboard */}
-      <div className="w-[calc(100%-350px)] min-h-screen max-h-screen">
-        {/* dashboard header */}
-        <DashboardHeader />
+        {/* dashboard */}
+        <div className="w-[calc(100%-350px)] min-h-screen max-h-screen">
+          {/* dashboard header */}
+          <DashboardHeader />
 
-        {/* dashboard contents */}
-        <div className="min-h-[calc(100%-88px)] p-10 max-h-[calc(100%-88px)] overflow-y-auto bg-[#F7F7FE] rounded-md">
-          <Outlet />
+          {/* dashboard contents */}
+          <div className="min-h-[calc(100%-88px)] p-10 max-h-[calc(100%-88px)] overflow-y-auto bg-[#F7F7FE] rounded-md">
+            <Outlet />
+          </div>
         </div>
       </div>
-    </div>
     </AosProvider>
   );
 };

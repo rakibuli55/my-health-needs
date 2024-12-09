@@ -10,9 +10,9 @@ const DashboardSidebarNavLinks = ({ userDashboardNavLinks }) => {
           key={navLink?.path}
           to={navLink?.path}
           className={({ isActive }) =>
-            `w-full flex gap-3 items-center px-6 py-3 rounded-2xl  group duration-500 transition hover:bg-activeColor ${
+            `w-full flex gap-3 items-center px-6 py-3 rounded-2xl group duration-500 transition hover:bg-[#0CA6FC] ${
               isActive
-                ? 'bg-activeColor shadow-[0px_6px_30px_0px_rgba(93,105,244,0.40)]'
+                ? 'bg-[#0CA6FC] shadow-[0px_6px_30px_0px_rgba(93,105,244,0.40)]'
                 : ''
             }`
           }

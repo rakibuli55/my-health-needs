@@ -80,7 +80,7 @@ const UserDashboardOrder = () => {
       <div className=" bg-white rounded-md px-16 py-10">
         <DashboardTitle title="My Order" />
 
-        <DashboardTable orders={orders} action={true} />
+        <DashboardTable orders={orders} />
       </div>
     </div>
   );

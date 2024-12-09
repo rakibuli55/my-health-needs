@@ -1,13 +1,16 @@
-import DoctorImg from "../../assets/images/hero-doctor.png";
-import CommonBtn from "../Common/CommonBtn";
-import ArrowIconBlack from "../../assets/images/icon/arrow-up-black.svg";
-import { Link } from "react-router-dom";
+import DoctorImg from '../../assets/images/hero-doctor.png';
+import CommonBtn from '../Common/CommonBtn';
+import ArrowIconBlack from '../../assets/images/icon/arrow-up-black.svg';
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
     <section className="px-[47px] pt-20">
-      <div data-aos="zoom-up"
-    data-aos-duration="1000" className="bg-primary rounded-[40px]">
+      <div
+        data-aos="zoom-up"
+        data-aos-duration="1000"
+        className="bg-primary rounded-[40px]"
+      >
         <div className="container">
           <h1
             data-aos="fade-up"
@@ -25,10 +28,19 @@ function HeroSection() {
               Operational bottlenecks, frequent billing errors, and mismanaged
               schedules can lead to revenue loss and frustrated patients.
             </p>
-            <img data-aos="zoom-up"
-          data-aos-duration="2000" className="" src={DoctorImg} alt="DoctorImg" />
-            <Link data-aos="zoom-in"
-          data-aos-duration="2000" to={"/"} className="pb-[85px]">
+            <img
+              data-aos="zoom-up"
+              data-aos-duration="2000"
+              className=""
+              src={DoctorImg}
+              alt="DoctorImg"
+            />
+            <Link
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              to={'/'}
+              className="pb-[85px]"
+            >
               <CommonBtn
                 data-aos="zoom-up"
                 data-aos-duration="2000"

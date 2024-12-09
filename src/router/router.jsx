@@ -17,6 +17,7 @@ import SignupPage from "@/Pages/Auth/SignupPage";
 import AuthLayout from "@/layout/AuthLayout";
 import HowItWorksPage from "@/Pages/HowItWorksPage";
 import FaqPage from "@/Pages/FaqPage";
+import UserOrderDetails from '@/Pages/Dashboard/User/UserOrderDetails';
 
 
 // Breadcrumb configuration
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/user-order-history',
         element: <UserDashboardOrder />,
+      },
+      {
+        path: '/dashboard/user/order-details',
+        element: <UserOrderDetails />,
       },
       {
         path: '/dashboard/user-payments',

@@ -79,7 +79,7 @@ function StepForm() {
 
   return (
     <div>
-      {/* step indicator  */}
+      {/* {/ step indicator  /} */}
       <div className="relative z-[1] w-[790px] mx-auto">
         <ul className="step-indicators flex items-center justify-between">
           <li className={currentStep >= 1 ? "active" : ""}>
@@ -91,29 +91,18 @@ function StepForm() {
             <span>Review and pay</span>
           </li>
           <li className={currentStep >= 3 ? "active" : ""}>
-      <div data-aos="zoom-up" data-aos-duration="1000" className="relative  z-[1] w-[790px] mx-auto">
-        <ul  className="step-indicators flex items-center justify-between">
-          <li data-aos="zoom-up" data-aos-duration="2000">
-            <p className="icon">1</p>
-            <span>Delivery</span>
-          </li>
-          <li data-aos="zoom-up" data-aos-duration="2000">
-            <p className="icon">2</p>
-            <span>Review and pay</span>
-          </li>
-          <li data-aos="zoom-up" data-aos-duration="2000">
             <p className="icon">3</p>
             <span>Receipt</span>
           </li>
         </ul>
         <p className="progress-line absolute top-10 left-1/2 translate-x-[-50%] w-[95%] border-[2px] border-dashed bg-indicatorsColor z-[-1]"></p>
       </div>
-      {/* form  */}
+      {/* {/ form  /} */}
       <form className="checkout-stepform" onSubmit={handleSubmit(onSumbit)}>
-        {/* step 1  */}
+        {/* {/ step 1  /} */}
         {currentStep === 1 && (
           <div className="step-one">
-            {/* step title */}
+            {/* {/ step title /} */}
             <div className="w-[882px] mx-auto text-center my-[100px]">
               <h3 className="text--xl mb-[60px] text-primryDark">
                 Where should we deliver your order?
@@ -128,9 +117,9 @@ function StepForm() {
                 For now, please provide your delivery address to proceed.
               </p>
             </div>
-            {/* name & email  */}
+            {/* {/ name & email  /} */}
             <div className="grid grid-cols-2 gap-10">
-              {/* name  */}
+              {/* {/ name  /} */}
               <div className="mt-[60px]">
                 <div>
                   <label htmlFor="name">Name</label>
@@ -143,7 +132,7 @@ function StepForm() {
                 </div>
                 {errors?.name && <p>{errors.name}</p>}
               </div>
-              {/* email  */}
+              {/* {/ email  /} */}
               <div className="mt-[60px]">
                 <div>
                   <label htmlFor="email">Email</label>
@@ -155,39 +144,10 @@ function StepForm() {
                   />
                 </div>
                 {errors?.email && <p>{errors.email}</p>}
-        <div className="step-one">
-          {/* step title */}
-          <div className="w-[882px] mx-auto text-center my-[100px]">
-            <h3 data-aos="zoom-up" data-aos-duration="2000" className="text--xl mb-[60px]">
-              Where should we deliver your order?
-            </h3>
-            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)]">
-              We ensure all packages are shipped in discreet, plain packaging
-              with no mention of MyHealthNeedsLondon, guaranteeing your privacy.
-            </p>
-            <p data-aos="zoom-up" data-aos-duration="2000" className="text-[24px] text-[rgba(0,0,0,0.60)] mt-[30px]">
-              In the next step, you can select your preferred delivery method.
-              For now, please provide your delivery address to proceed.
-            </p>
-          </div>
-          {/* name & email  */}
-          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-2 gap-10">
-            {/* name  */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
-              <div>
-                <label data-aos="zoom-in" data-aos-duration="2000" htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="write your name"
-                  {...register("name", { required: "Name is required" })}
-                />
               </div>
             </div>
-            {/* billing address  */}
+            {/* {/ billing address  /} */}
             <div className="mt-[60px]">
-            {/* email  */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
               <div>
                 <label htmlFor="email">Billing address</label>
                 <textarea
@@ -199,7 +159,7 @@ function StepForm() {
                 ></textarea>
               </div>
               {errors?.billingAddress && <p>{errors.billingAddress}</p>}
-              {/* find location  */}
+              {/* {/ find location  /} */}
               <div className="mt-10 w-fit mx-auto cursor-pointer">
                 <div className="flex items-center gap-2 text-[20px] font-medium text-white bg-primary rounded-[10px] py-4 px-6">
                   <p className="text-[24px]">
@@ -209,9 +169,9 @@ function StepForm() {
                 </div>
               </div>
             </div>
-            {/* contact, city & post code  */}
+            {/* {/ contact, city & post code  /} */}
             <div className="grid grid-cols-3 gap-10">
-              {/* contact  */}
+              {/* {/ contact  /} */}
               <div className="mt-[60px]">
                 <label htmlFor="contact">Contact</label>
                 <Controller
@@ -227,7 +187,7 @@ function StepForm() {
                   rules={{ required: "Phone number is required" }}
                 />
               </div>
-              {/* city  */}
+              {/* {/ city  /} */}
               <div className="mt-[60px]">
                 <div>
                   <label htmlFor="city">City</label>
@@ -240,7 +200,7 @@ function StepForm() {
                 </div>
                 {errors?.city && <p>{errors.city}</p>}
               </div>
-              {/* post code  */}
+              {/* {/ post code  /} */}
               <div className="mt-[60px]">
                 <div>
                   <label htmlFor="email">Postcode</label>
@@ -256,13 +216,13 @@ function StepForm() {
                 {errors?.postcode && <p>{errors.postcode}</p>}
               </div>
             </div>
-            {/* add prescription  */}
+            {/* {/ add prescription  /} */}
             <div className="mt-[100px] add-prescription">
               <h4 className="text-[36px] text-primryDark font-bold mb-10">
                 Add your prescription file
               </h4>
               <div className="flex flex-col items-center p-[50px] rounded-[10px] border border-dashed border-[#A7A7A7]">
-                {/* file preview  */}
+                {/* {/ file preview  /} */}
                 <div>
                   <div>
                     <img
@@ -292,50 +252,11 @@ function StepForm() {
                         )}
                       </UploadButton>
                     )}
-              {errors?.email && <p>{errors.email}</p>}
-            </div>
-          </div>
-          {/* billing address  */}
-          <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
-            <div>
-              <label htmlFor="email">Billing address</label>
-              <textarea
-                name="billingAddress"
-                {...register("billingAddress", {
-                  required: "Billing Address is required",
-                })}
-                placeholder="Address"
-              ></textarea>
-            </div>
-            {errors?.billingAddress && <p>{errors.billingAddress}</p>}
-            {/* find location  */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-10 w-fit mx-auto cursor-pointer">
-              <div className="flex items-center gap-2 text-[20px] font-medium text-white bg-primary rounded-[10px] py-4 px-6">
-                <p className="text-[24px]">
-                  <CiLocationOn />
-                </p>
-                Find my address
-              </div>
-            </div>
-          </div>
-          {/* contact, city & post code  */}
-          <div data-aos="zoom-in" data-aos-duration="2000" className="grid grid-cols-3 gap-10">
-            {/* contact  */}
-            <div className="mt-[60px]">
-              <label htmlFor="contact">Contact</label>
-              <Controller
-                control={control}
-                name="phone"
-                render={({ field }) => (
-                  <PhoneInput
-                    country={"us"}
-                    value={field.value}
-                    onChange={(phone) => field.onChange(phone)}
                   />
                 </div>
               </div>
             </div>
-            {/* delivery information  */}
+            {/* {/ delivery information  /} */}
             <div>
               <div className="text-center w-[882px] mx-auto mt-[172px]">
                 <h3 className="text--xl mb-5">Delivery Information</h3>
@@ -351,12 +272,8 @@ function StepForm() {
                   business day (Monday).
                 </p>
               </div>
-              {/* Royal Mail Tracked */}
+              {/* {/ Royal Mail Tracked /} */}
               <div className="mt-[100px] royalmail-radio-wrap">
-            {/* city  */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
-              <div>
-                <label htmlFor="city">City</label>
                 <input
                   className="hidden"
                   id="royalMail"
@@ -379,47 +296,31 @@ function StepForm() {
                 </label>
               </div>
             </div>
-            {/* button  */}
+            {/* {/ button  /} */}
             <div>
               <div
                 className="py-[22px] px-20 bg-primryDark rounded-[10px] text-[24px] font-bold text-white w-fit mx-auto mt-10 cursor-pointer"
                 onClick={handleNext}
               >
                 Continue to payment
-            {/* post code  */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[60px]">
-              <div>
-                <label htmlFor="email">Postcode</label>
-                <input
-                  type="number"
-                  name="postcode"
-                  placeholder="Postcode"
-                  {...register("postcode", {
-                    required: "Postcode is required",
-                  })}
-                />
               </div>
             </div>
           </div>
         )}
 
-        {/* step 2   */}
+        {/* {/ step 2   /} */}
         {currentStep === 2 && (
           <div className="setp-two mt-[110px]">
-            {/* step title  */}
+            {/* {/ step title  /} */}
             <div className="text-center">
               <h3 className="text--xl mb-5 text-primryDark">
                 Check your order
               </h3>
-          {/* delivery information  */}
-          <div>
-            <div data-aos="zoom-in" data-aos-duration="2000" className="text-center w-[882px] mx-auto mt-[172px]">
-              <h3 className="text--xl mb-5">Delivery Information</h3>
               <p className="text-[24px] text-primary">
                 Check your order details and Enter promo code if you have one.
               </p>
             </div>
-            {/* treatment preference  */}
+            {/* {/ treatment preference  /} */}
             <div className="py-12 px-[75px] bg-primaryLight rounded-[10px] mt-[100px]">
               <h4 className="text-[24px] font-bold mb-[30px] text-primryDark">
                 Your treatment preference
@@ -444,12 +345,12 @@ function StepForm() {
                 </ul>
               </div>
             </div>
-            {/* delivery address  */}
+            {/* {/ delivery address  /} */}
             <div className="py-12 px-[75px] bg-primaryLight rounded-[10px] mt-[100px]">
               <h3 className="text-[24px] font-bold mb-[14px] text-primryDark">
                 Delivery address:
               </h3>
-              {/* address  */}
+              {/* {/ address  /} */}
               <div className="flex items-center justify-between">
                 <div className="w-[820px]">
                   {!isAddressEditMode ? (
@@ -476,7 +377,7 @@ function StepForm() {
                 </div>
               </div>
             </div>
-            {/* suggested medicine  */}
+            {/* {/ suggested medicine  /} */}
             <div className="suggested-medicine mt-[100px]">
               <h4 className="text-[32px] font-bold text-primryDark">
                 Add these to complete your treatment:
@@ -515,7 +416,7 @@ function StepForm() {
                     </div>
                   </div>
                 ))}
-                {/* button  */}
+                {/* {/ button  /} */}
                 <div className="mt-[60px]">
                   <div className="py-[20px] px-[60px] bg-primryDark rounded-[10px] text-[24px] font-bold text-white w-fit cursor-pointer duration-200 ease-in-out hover:opacity-90">
                     Add Extra Medicine
@@ -523,14 +424,9 @@ function StepForm() {
                 </div>
               </div>
             </div>
-            {/* agreements  */}
+            {/* {/ agreements  /} */}
             <div className="mt-[100px] agreement">
               <input
-            {/* Royal Mail Tracked */}
-            <div data-aos="zoom-in" data-aos-duration="2000" className="mt-[100px] royalmail-radio-wrap">
-              <input
-                className="hidden"
-                id="royalMail"
                 type="checkbox"
                 name="deliveryAgreements"
                 id="deliveryAgreements"
@@ -544,7 +440,7 @@ function StepForm() {
                 sharing of information
               </label>
             </div>
-            {/* payment options  */}
+            {/* {/ payment options  /} */}
             <div className="payment-options text-center w-[566px] mx-auto mt-[100px]">
               <h4 className="text--xl text-primryDark mb-[60px]">
                 Payment Options
@@ -564,16 +460,6 @@ function StepForm() {
                   <img className="w-[96px] h-[33px]" src={PaypalIcon} alt="" />
                 </Link>
               </div>
-                <div data-aos="zoom-in" data-aos-duration="2000" className="w-[800px]">
-                  <h4 className="text-[24px] font-semibold text-primryDark mb-[10px]">
-                    Royal Mail Tracked™
-                  </h4>
-                  <p>
-                    Estimated delivery: 1–2 working days after prescription
-                    approval Signature required upon delivery
-                  </p>
-                </div>
-              </label>
             </div>
           </div>
         )}

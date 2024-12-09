@@ -64,8 +64,6 @@
 }
 
 @layer components {
-
-
   .range-slider {
     -webkit-appearance: none; /* Remove default styles */
     width: 300px;
@@ -76,23 +74,10 @@
     cursor: pointer;
     transition: background 0.3s;
   }
-
   /* Change the background on hover */
   .range-slider:hover {
     background: #def105;
   }
-
-  /* Custom thumb */
-
-
-  /* Thumb hover effect */
-
-
-
-
-
-
-
   .menu-item {
     @apply text-[18px] font-semibold text-menuLinkColor duration-200 ease-in-out hover:text-primary;
   }
@@ -263,13 +248,13 @@
 
   .royalmail-radio-wrap input:checked + label::after{
     content: '';
-    @apply h-6 w-6 bg-primryDark left-[48px]
-
+    @apply h-6 w-6 bg-primryDark left-[48px];
+  }
   .add-prescription button {
     @apply text-[20px] py-5 px-10 bg-primary text-white font-semibold rounded-[10px];
-
   }
 }
+
 
 .swiper-wrapper {
   padding-bottom: 50px !important;

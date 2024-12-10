@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { NavLink, useLocation } from 'react-router-dom';
 
-const DashboardSidebarNavLinks = ({ userDashboardNavLinks }) => {
+const DashboardSidebarNavLinks = ({ dashboardNavLinks }) => {
   const currentPath = useLocation().pathname;
   return (
     <div className="w-full space-y-4">
-      {userDashboardNavLinks?.map((navLink) => (
+      {dashboardNavLinks?.map((navLink) => (
         <NavLink
           key={navLink?.path}
           to={navLink?.path}

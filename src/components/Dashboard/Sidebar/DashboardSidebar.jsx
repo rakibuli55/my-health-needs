@@ -6,7 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 import DashboardSidebarNavLinks from './DashboardSidebarNavLinks/DashboardSidebarNavLinks';
 
-const DashboardSidebar = ({ userDashboardNavLinks }) => {
+const DashboardSidebar = ({ dashboardNavLinks }) => {
   return (
     <div className="min-h-screen max-h-screen w-[350px] p-8">
       {/* logo */}
@@ -20,7 +20,7 @@ const DashboardSidebar = ({ userDashboardNavLinks }) => {
       <div className="w-full border-dashed border-t border-[#5D69F4]/30 my-6" />
 
       {/* dashboard navLinks */}
-      <DashboardSidebarNavLinks userDashboardNavLinks={userDashboardNavLinks} />
+      <DashboardSidebarNavLinks dashboardNavLinks={dashboardNavLinks} />
 
       {/* logout */}
       <div className="mt-4 w-full flex gap-3 items-center px-6 py-3 rounded-2xl group duration-500 transition hover:bg-[#0CA6FC] cursor-pointer">

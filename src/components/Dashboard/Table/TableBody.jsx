@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
-const TableBody = ({ items, columns, status }) => {
+const TableBody = ({ items, columns, status, doctor }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   return (
@@ -15,7 +15,8 @@ const TableBody = ({ items, columns, status }) => {
       {items?.map((item, idx) => (
         <tr
           onClick={() => {
-            !status && navigate('/dashboard/user/order-details');
+            !doctor && !status && navigate('/dashboard/user/order-details');
+            doctor && navigate('/dashboard/doctor/order-details');
           }}
           key={idx}
           className="border-y hover:bg-primary/20 transition duration-300 text-sm md:text-base text-[#052D4C] font-medium cursor-pointer"
@@ -29,7 +30,7 @@ const TableBody = ({ items, columns, status }) => {
             >
               {column === 'status' ? (
                 <TableStatusButton title={item[column]} />
-              ) : column === 'price' || column=="CurrentPlan" ? (
+              ) : column === 'price' || column == 'CurrentPlan' ? (
                 `$${item[column]}`
               ) : (
                 item[column]

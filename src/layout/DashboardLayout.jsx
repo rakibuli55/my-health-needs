@@ -3,6 +3,7 @@ import {
   DashboardHomeSvg,
   DashboardOrderSvg,
   DashboardPaymentSvg,
+  DashboardStarSvg,
   ReviewSvg,
 } from '@/components/SvgContainer/SvgContainer';
 import { Outlet } from 'react-router-dom';
@@ -15,41 +16,71 @@ import DashboardSidebar from '@/components/Dashboard/Sidebar/DashboardSidebar';
 import AosProvider from '@/provider/Aos/AosProvider';
 
 const DashboardLayout = () => {
+  const userType = 'doctor';
   const userDashboardNavLinks = [
     {
       title: 'Homepage',
-      path: '/dashboard/user-homepage',
+      path: '/dashboard/user/user-homepage',
       icon: DashboardHomeSvg,
     },
     {
       title: 'Order History',
-      path: '/dashboard/user-order-history',
+      path: '/dashboard/user/user-order-history',
       icon: DashboardOrderSvg,
     },
     {
       title: 'Assessment Result',
-      path: '/dashboard/user-assessment-result',
+      path: '/dashboard/user/user-assessment-result',
       icon: AssessmentSvg,
     },
     {
       title: 'My Payments',
-      path: '/dashboard/user-payments',
+      path: '/dashboard/user/user-payments',
       icon: DashboardPaymentSvg,
     },
     {
       title: 'My Subscription',
-      path: '/dashboard/user-subscription',
+      path: '/dashboard/user/user-subscription',
       icon: SubscriptionSvg,
     },
     {
       title: 'My Review',
-      path: '/dashboard/user-review',
+      path: '/dashboard/user/user-review',
       icon: ReviewSvg,
     },
     {
       title: 'My Profile',
-      path: '/dashboard/user-profile',
+      path: '/dashboard/user/user-profile',
       icon: DashboardUserSvg,
+    },
+  ];
+  const doctorDashboardNavLinks = [
+    {
+      title: 'Dashboard',
+      path: '/dashboard/doctor/homepage',
+      icon: DashboardHomeSvg,
+    },
+    {
+      title: 'Order Management',
+      path: '/dashboard/doctor/order-management',
+      icon: DashboardOrderSvg,
+    },
+    {
+      title: 'Meeting Management',
+      path: '/dashboard/doctor/meeting-management',
+      icon: DashboardStarSvg,
+    },
+  ];
+  const pharmacistDashboardNavLinks = [
+    {
+      title: 'Dashboard',
+      path: '/dashboard/pharmacist/homepage',
+      icon: DashboardHomeSvg,
+    },
+    {
+      title: 'Order Management',
+      path: '/dashboard/pharmacist/order-management',
+      icon: DashboardOrderSvg,
     },
   ];
 
@@ -57,7 +88,15 @@ const DashboardLayout = () => {
     <AosProvider>
       <div className="min-h-screen max-h-screen flex overflow-hidden font-nunito">
         {/* sidebar */}
-        <DashboardSidebar userDashboardNavLinks={userDashboardNavLinks} />
+        <DashboardSidebar
+          dashboardNavLinks={
+            userType === 'user'
+              ? userDashboardNavLinks
+              : userType == 'doctor'
+              ? doctorDashboardNavLinks
+              : pharmacistDashboardNavLinks
+          }
+        />
 
         {/* dashboard */}
         <div className="w-[calc(100%-350px)] min-h-screen max-h-screen">

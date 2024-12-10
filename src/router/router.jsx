@@ -21,6 +21,12 @@ import UserOrderDetails from '@/Pages/Dashboard/User/UserOrderDetails';
 import UserAssessmentResult from '@/Pages/Dashboard/User/UserAssessmentResult';
 import UserSubscription from '@/Pages/Dashboard/User/UserSubscription';
 import UserReviews from '@/Pages/Dashboard/User/UserReviews';
+import DoctorDashboardHomepage from '@/Pages/Dashboard/Doctor/DoctorDashboardHomepage';
+import DoctorDashboardMeetingManagement from '@/Pages/Dashboard/Doctor/DoctorDashboardMeetingManagement';
+import DoctorDashboardOrderManagement from '@/Pages/Dashboard/Doctor/DoctorDashboardOrderManagement';
+import PharmacistDashboardHomepage from '@/Pages/Dashboard/Pharmacist/PharmacistDashboardHomepage';
+import PharmacistOrderManagement from '@/Pages/Dashboard/Pharmacist/PharmacistOrderManagement';
+import OrderDetailsDoctor from '@/Pages/Dashboard/Doctor/OrderDetailsDoctor';
 
 // Breadcrumb configuration
 const routes = [
@@ -92,15 +98,15 @@ const router = createBrowserRouter([
     children: [
       // user dashboard:
       {
-        path: '/dashboard/user-homepage',
+        path: '/dashboard/user/user-homepage',
         element: <UserDashboardHome />,
       },
       {
-        path: '/dashboard/user-order-history',
+        path: '/dashboard/user/user-order-history',
         element: <UserDashboardOrder />,
       },
       {
-        path: '/dashboard/user-assessment-result',
+        path: '/dashboard/user/user-assessment-result',
         element: <UserAssessmentResult />,
       },
       {
@@ -108,20 +114,48 @@ const router = createBrowserRouter([
         element: <UserOrderDetails />,
       },
       {
-        path: '/dashboard/user-payments',
+        path: '/dashboard/user/user-payments',
         element: <UserDashboardPayments />,
       },
       {
-        path: '/dashboard/user-subscription',
+        path: '/dashboard/user/user-subscription',
         element: <UserSubscription />,
       },
       {
-        path: '/dashboard/user-review',
+        path: '/dashboard/user/user-review',
         element: <UserReviews />,
       },
       {
-        path: '/dashboard/user-profile',
+        path: '/dashboard/user/user-profile',
         element: <UserDashboardProfile />,
+      },
+
+      // Doctor Dashboard:
+      {
+        path: '/dashboard/doctor/homepage',
+        element: <DoctorDashboardHomepage />,
+      },
+      {
+        path: '/dashboard/doctor/order-details',
+        element: <OrderDetailsDoctor />,
+      },
+      {
+        path: '/dashboard/doctor/order-management',
+        element: <DoctorDashboardOrderManagement />,
+      },
+      {
+        path: '/dashboard/doctor/meeting-management',
+        element: <DoctorDashboardMeetingManagement />,
+      },
+
+      // Pharmacist Dashboard:
+      {
+        path: '/dashboard/pharmacist/homepage',
+        element: <PharmacistDashboardHomepage />,
+      },
+      {
+        path: '/dashboard/pharmacist/order-management',
+        element: <PharmacistOrderManagement />,
       },
     ],
   },

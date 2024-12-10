@@ -79,7 +79,7 @@ function Navbar() {
         {/* cart  */}
         <div data-aos="zoom-left" data-aos-duration="2000">
           <Link
-            to="/dashboard/user-homepage"
+            to="/dashboard/user/user-homepage"
             className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-full"
           >
             <img className="w-7 h-7" src={CartIcon} alt={CartIcon} />

@@ -3,7 +3,7 @@
 import TableHead from './TableHead';
 import TableBody from './TableBody';
 
-const DashboardTable = ({ orders, status }) => {
+const DashboardTable = ({ orders, status ,doctor}) => {
   const headers = Object.keys(orders[0]);
   return (
     <div className="rounded-lg bg-white  md:rounded-xl lg:rounded-2xl">
@@ -14,7 +14,7 @@ const DashboardTable = ({ orders, status }) => {
           </thead>
 
           <tbody>
-            <TableBody columns={headers} items={orders} status={status} />
+            <TableBody columns={headers} items={orders} status={status} doctor={doctor} />
           </tbody>
         </table>
       </div>

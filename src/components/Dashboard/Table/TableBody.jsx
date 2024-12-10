@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
-const TableBody = ({ items, columns, status, doctor, pharmacist }) => {
+const TableBody = ({ items, columns, status }) => {
   const { role } = useAuth();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();

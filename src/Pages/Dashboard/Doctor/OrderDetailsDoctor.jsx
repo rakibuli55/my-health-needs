@@ -529,7 +529,12 @@ const OrderDetailsDoctor = () => {
             <div className="mt-10">
               <h4 className="text-xl font-bold text-[#052D4C]">Add a Note</h4>
 
-              <form onSubmit={handleSubmit(onSubmit)} action="" className="w-full mt-3">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                
+                action=""
+                className="w-full mt-3"
+              >
                 <textarea
                   rows={5}
                   {...register('note', { required: true })}

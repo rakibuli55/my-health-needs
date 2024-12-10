@@ -28,7 +28,7 @@ function HeroSection() {
               </li>
             </ul>
             <div>
-              <Link to={"/"} className="flex items-center gap-[10px] text-[24px] py-5 px-[30px] bg-primary rounded-[40px] font-semibold w-fit text-white border-[2px] border-white duration-200 ease-in-out hover:bg-transparent hover:text-black hover:border-primary">
+              <Link to={"/consultation"} className="flex items-center gap-[10px] text-[24px] py-5 px-[30px] bg-primary rounded-[40px] font-semibold w-fit text-white border-[2px] border-white duration-200 ease-in-out hover:bg-transparent hover:text-black hover:border-primary">
                 Start Consultation
                 <FaArrowRightLong />
               </Link>

@@ -42,7 +42,7 @@ function QuickConsultation() {
               </ul>
               {/* btn  */}
               <div className="mt-9">
-                <Link to={"/"}>
+                <Link to={"/consultation"}>
                   <CommonButtonV2 type="fill" text="Get Started" />
                 </Link>
               </div>

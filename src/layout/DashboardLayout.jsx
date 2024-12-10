@@ -3,6 +3,7 @@ import {
   DashboardHomeSvg,
   DashboardOrderSvg,
   DashboardPaymentSvg,
+  ReviewSvg,
 } from '@/components/SvgContainer/SvgContainer';
 import { Outlet } from 'react-router-dom';
 import {
@@ -39,6 +40,11 @@ const DashboardLayout = () => {
       title: 'My Subscription',
       path: '/dashboard/user-subscription',
       icon: SubscriptionSvg,
+    },
+    {
+      title: 'My Review',
+      path: '/dashboard/user-review',
+      icon: ReviewSvg,
     },
     {
       title: 'My Profile',

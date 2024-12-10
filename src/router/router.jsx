@@ -12,49 +12,50 @@ import UserDashboardProfile from '@/Pages/Dashboard/User/UserDashboardProfile';
 import AssessmentPage from '@/Pages/AssessmentPage';
 import MedicineDetailsPage from '@/Pages/MedicineDetailsPage';
 import CheckoutPage from '@/Pages/CheckoutPage';
-import LoginPage from "@/Pages/Auth/LoginPage";
-import SignupPage from "@/Pages/Auth/SignupPage";
-import AuthLayout from "@/layout/AuthLayout";
-import HowItWorksPage from "@/Pages/HowItWorksPage";
-import FaqPage from "@/Pages/FaqPage";
+import LoginPage from '@/Pages/Auth/LoginPage';
+import SignupPage from '@/Pages/Auth/SignupPage';
+import AuthLayout from '@/layout/AuthLayout';
+import HowItWorksPage from '@/Pages/HowItWorksPage';
+import FaqPage from '@/Pages/FaqPage';
 import UserOrderDetails from '@/Pages/Dashboard/User/UserOrderDetails';
 import UserAssessmentResult from '@/Pages/Dashboard/User/UserAssessmentResult';
-
+import UserSubscription from '@/Pages/Dashboard/User/UserSubscription';
+import UserReviews from '@/Pages/Dashboard/User/UserReviews';
 
 // Breadcrumb configuration
 const routes = [
-  { path: "/", breadcrumb: "Home" },
-  { path: "/service", breadcrumb: "Service" },
-  { path: "/checkout", breadcrumb: "Checkout" },
-  { path: "/howitworks", breadcrumb: "How it Works" },
-  { path: "/assessment", breadcrumb: `Consultation` },
+  { path: '/', breadcrumb: 'Home' },
+  { path: '/service', breadcrumb: 'Service' },
+  { path: '/checkout', breadcrumb: 'Checkout' },
+  { path: '/howitworks', breadcrumb: 'How it Works' },
+  { path: '/assessment', breadcrumb: `Consultation` },
 ];
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "/service",
+        path: '/service',
         element: <ServicePage />,
       },
       {
-        path: "/service/:name",
+        path: '/service/:name',
         element: <SingleHealthPage />,
       },
 
       {
-        path: "/consultation",
+        path: '/consultation',
         element: <AssessmentPage></AssessmentPage>,
       },
       {
-        path: "/medicine-details",
+        path: '/medicine-details',
         element: <MedicineDetailsPage></MedicineDetailsPage>,
       },
       {
@@ -62,31 +63,31 @@ const router = createBrowserRouter([
         element: <CheckoutPage />,
       },
       {
-        path: "/howitworks",
-        element: <HowItWorksPage />
+        path: '/howitworks',
+        element: <HowItWorksPage />,
       },
       {
-        path: "/faq",
-        element: <FaqPage />
+        path: '/faq',
+        element: <FaqPage />,
       },
     ],
   },
   {
-    path: "/auth",
+    path: '/auth',
     element: <AuthLayout></AuthLayout>,
     children: [
       {
-        path: "/auth/login",
+        path: '/auth/login',
         element: <LoginPage></LoginPage>,
       },
       {
-        path: "/auth/signup",
+        path: '/auth/signup',
         element: <SignupPage></SignupPage>,
       },
     ],
   },
   {
-    path: "/dashboard",
+    path: '/dashboard',
     element: <DashboardLayout />,
     children: [
       // user dashboard:
@@ -111,7 +112,15 @@ const router = createBrowserRouter([
         element: <UserDashboardPayments />,
       },
       {
-        path: "/dashboard/user-profile",
+        path: '/dashboard/user-subscription',
+        element: <UserSubscription />,
+      },
+      {
+        path: '/dashboard/user-review',
+        element: <UserReviews />,
+      },
+      {
+        path: '/dashboard/user-profile',
         element: <UserDashboardProfile />,
       },
     ],

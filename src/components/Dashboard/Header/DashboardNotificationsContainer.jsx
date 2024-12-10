@@ -1,76 +1,76 @@
 import DashboardNotification from './DashboardNotification';
-
+import user from "@/assets/images/user.png"
 /* eslint-disable react/prop-types */
 const DashboardNotificationsContainer = ({ showNotifications }) => {
   const allNotifications = [
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',
     },
     {
-      image: 'https://i.postimg.cc/m2xPtgcd/user.png',
+      image: user,
       title: 'New Medicine Added.Check your order',
       link: '',
       time: '10 Minutes ago',

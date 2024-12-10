@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const TableHead = ({ titles,status }) => {
+const TableHead = ({ titles, status }) => {
   return (
     <tr className="bg-[#F2F3F4] text-sm font-bold text-[#222E48CC] md:text-base lg:text-lg">
       {titles.map((title, idx) => (

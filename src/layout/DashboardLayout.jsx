@@ -14,9 +14,11 @@ import {
 import DashboardHeader from '@/components/Dashboard/Header/DashboardHeader';
 import DashboardSidebar from '@/components/Dashboard/Sidebar/DashboardSidebar';
 import AosProvider from '@/provider/Aos/AosProvider';
+import useAuth from '@/Hooks/useAuth';
 
 const DashboardLayout = () => {
-  const userType = 'pharmacist';
+  const { role } = useAuth();
+
   const userDashboardNavLinks = [
     {
       title: 'Homepage',
@@ -91,9 +93,9 @@ const DashboardLayout = () => {
         {/* sidebar */}
         <DashboardSidebar
           dashboardNavLinks={
-            userType === 'user'
+            role === 'user'
               ? userDashboardNavLinks
-              : userType == 'doctor'
+              : role == 'doctor'
               ? doctorDashboardNavLinks
               : pharmacistDashboardNavLinks
           }

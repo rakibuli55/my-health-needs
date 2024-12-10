@@ -14,7 +14,7 @@ const TableBody = ({ items, columns, status, doctor, pharmacist }) => {
   const getDetailsRoute = () => {
     if (doctor) return '/dashboard/doctor/order-details';
     if (pharmacist) return '/dashboard/pharmacist/order-details';
-    return '/dashboard/user/order-details';
+    if (!status) return '/dashboard/user/order-details';
   };
 
   const handleRowClick = () => {

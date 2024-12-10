@@ -1,11 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/images/logo/logo.svg";
-import CartIcon from "../assets/images/icon/cart.svg";
-import { useForm } from "react-hook-form";
-import { GoSearch } from "react-icons/go";
-import HeaderBtn from "../components/HeaderComponents/HeaderBtn";
+import { Link, NavLink } from 'react-router-dom';
+import Logo from '../assets/images/logo/logo.svg';
+import CartIcon from '../assets/images/icon/cart.svg';
+import { useForm } from 'react-hook-form';
+import { GoSearch } from 'react-icons/go';
+import HeaderBtn from '../components/HeaderComponents/HeaderBtn';
+import useAuth from '@/Hooks/useAuth';
 
 function Navbar() {
+  const { role } = useAuth();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -19,7 +21,7 @@ function Navbar() {
         <div className="flex items-center gap-10">
           {/* logo  */}
           <div>
-            <Link to={"/"}>
+            <Link to={'/'}>
               <img
                 data-aos="zoom-up"
                 data-aos-duration="2000"
@@ -32,22 +34,22 @@ function Navbar() {
           {/* menus  */}
           <ul className="flex items-center gap-[30px]">
             <li data-aos="zoom-up" data-aos-duration="2000">
-              <NavLink to={"/service"} className="menu-item">
+              <NavLink to={'/service'} className="menu-item">
                 HealthCare Service
               </NavLink>
             </li>
             <li data-aos="zoom-up" data-aos-duration="2000">
-              <NavLink to={"/howitworks"} className="menu-item">
+              <NavLink to={'/howitworks'} className="menu-item">
                 How it works
               </NavLink>
             </li>
             <li data-aos="zoom-up" data-aos-duration="2000">
-              <NavLink to={"/faq"} className="menu-item">
+              <NavLink to={'/faq'} className="menu-item">
                 FAQ
               </NavLink>
             </li>
             <li data-aos="zoom-up" data-aos-duration="2000">
-              <NavLink to={"/auth/login"} className="menu-item">
+              <NavLink to={'/auth/login'} className="menu-item">
                 Login
               </NavLink>
             </li>
@@ -63,7 +65,7 @@ function Navbar() {
         {/* search  */}
         <form onSubmit={handleSubmit(onSubmit)} className="relative w-[350px]">
           <input
-            {...register("search")}
+            {...register('search')}
             type="text"
             name="search"
             placeholder="Search your remdies"
@@ -79,7 +81,15 @@ function Navbar() {
         {/* cart  */}
         <div data-aos="zoom-left" data-aos-duration="2000">
           <Link
-            to="/dashboard/user/user-homepage"
+            to={
+              role == 'user'
+                ? '/dashboard/user/user-homepage'
+                : role == 'doctor'
+                ? '/dashboard/doctor/homepage'
+                : role == 'pharmacist'
+                ? '/dashboard/pharmacist/homepage'
+                : '/'
+            }
             className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-full"
           >
             <img className="w-7 h-7" src={CartIcon} alt={CartIcon} />
@@ -87,7 +97,7 @@ function Navbar() {
         </div>
         {/* header btn  */}
         <div data-aos="zoom-left" data-aos-duration="2000">
-          <Link to={"/auth/signup"}>
+          <Link to={'/auth/signup'}>
             <HeaderBtn text="Sign Up" />
           </Link>
         </div>

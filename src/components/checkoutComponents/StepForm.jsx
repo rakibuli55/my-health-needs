@@ -216,6 +216,18 @@ function StepForm() {
                 {errors?.postcode && <p>{errors.postcode}</p>}
               </div>
             </div>
+
+            {/* gp name and address */}
+            <div className="flex items-center gap-8 pt-8">
+              <div className="w-5/12  flex flex-col">
+                <label htmlFor="">GP Name</label>
+                <input className="border rounded-lg px-4 py-2" placeholder="Write gp name" type="text" name="" id="" />
+              </div>
+              <div className="w-7/12  flex flex-col ">
+                <label htmlFor="">GP Address</label>
+                <input className="border rounded-lg px-4 py-2" placeholder="Write gp adress" type="text" name="" id="" />
+              </div>
+            </div>
             {/* {/ add prescription  /} */}
             <div className="mt-[100px] add-prescription">
               <h4 className="text-[36px] text-primryDark font-bold mb-10">

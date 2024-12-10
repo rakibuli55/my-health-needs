@@ -120,10 +120,10 @@ const DoctorDashboardHomepage = () => {
           </h2>
           <div>
             <Select>
-              <SelectTrigger className="w-full border h-12 rounded-full px-8 font-nunito">
+              <SelectTrigger className="w-40 border font-semibold text-base h-12 rounded-full px-8 font-nunito">
                 <SelectValue placeholder="All Order" />
               </SelectTrigger>
-              <SelectContent className={'font-medium'}>
+              <SelectContent>
                 <SelectItem value="All Order">All Order</SelectItem>
                 <SelectItem value="Recent">Recent</SelectItem>
                 <SelectItem value="Old">Old</SelectItem>

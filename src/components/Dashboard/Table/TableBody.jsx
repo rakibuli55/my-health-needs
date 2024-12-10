@@ -2,19 +2,21 @@ import TableStatusButton from '@/components/Common/TableStatusButton';
 import { Modal } from '@/components/Modals/Modal';
 import SubscriptionModal from '@/components/Modals/SubscriptionModal';
 import { ViewSvg } from '@/components/SvgContainer/SvgContainer';
+import useAuth from '@/Hooks/useAuth';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
 const TableBody = ({ items, columns, status, doctor, pharmacist }) => {
+  const { role } = useAuth();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const getDetailsRoute = () => {
-    if (doctor) return '/dashboard/doctor/order-details';
-    if (pharmacist) return '/dashboard/pharmacist/order-details';
-    if (!status) return '/dashboard/user/order-details';
+    if (role == 'doctor') return '/dashboard/doctor/order-details';
+    if (role == 'pharmacist') return '/dashboard/pharmacist/order-details';
+    if (role == 'user') return '/dashboard/user/order-details';
   };
 
   const handleRowClick = () => {

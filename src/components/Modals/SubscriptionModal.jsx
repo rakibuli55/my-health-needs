@@ -4,12 +4,14 @@ import {
   DialogDescription,
   DialogHeader,
 } from '@/components/ui/dialog';
+import { DialogTitle } from '@radix-ui/react-dialog';
 const SubscriptionModal = ({ setOpen }) => {
   return (
     <DialogContent className="sm:max-w-[650px] px-10 py-6 text-center font-nunito">
       {/* Wrap everything in a container that can scroll and hide scrollbar */}
       <div className="max-h-[80vh] overflow-y-auto scrollbar-hide">
         <DialogHeader>
+          <DialogTitle className="text-xl text-[#052D4C] font-bold font-poppins "></DialogTitle>
           <DialogDescription className="text-[#052D4C] text-base">
             {/* modal body */}
             <div className="w-full mt-4">

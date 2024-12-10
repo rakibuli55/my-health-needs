@@ -18,9 +18,14 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const OrderDetailsDoctor = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
   const medicineInfo = [
     {
       name: 'Paracetamol',
@@ -35,6 +40,15 @@ const OrderDetailsDoctor = () => {
       totalPrice: 2100,
     },
   ];
+
+  //functions:
+  const onSubmit = (data) => {
+    console.log(data);
+    if (data) {
+      toast.success('Your feedback has been saved successfully');
+      navigate('/dashboard/doctor/order-management');
+    }
+  };
   return (
     <div>
       {/* top title */}
@@ -515,9 +529,10 @@ const OrderDetailsDoctor = () => {
             <div className="mt-10">
               <h4 className="text-xl font-bold text-[#052D4C]">Add a Note</h4>
 
-              <form action="" className="w-full mt-3">
+              <form onSubmit={handleSubmit(onSubmit)} action="" className="w-full mt-3">
                 <textarea
                   rows={5}
+                  {...register('note', { required: true })}
                   className="p-5 rounded-lg border border-[#00000033] w-full resize-none focus:outline-none"
                   placeholder="write your notes..."
                   name="note"

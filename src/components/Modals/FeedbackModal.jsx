@@ -7,10 +7,24 @@ import {
   DialogTitle,
 } from '../ui/dialog';
 import { Star } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const FeedbackModal = ({ setOpen }) => {
+  const { register, handleSubmit } = useForm();
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const navigate = useNavigate();
+
+  //functions:
+  const onSubmit = (data) => {
+    console.log(data);
+    if(data){
+      toast.success("Your feedback has been saved successfully")
+      navigate("/dashboard/user/user-review")
+    }
+  };
   const handleRating = (value) => {
     setRating(value);
   };
@@ -35,7 +49,7 @@ const FeedbackModal = ({ setOpen }) => {
               </div>
 
               {/* Rating */}
-              <div className='w-full flex items-center justify-center mt-3 mb-6'>
+              <div className="w-full flex items-center justify-center mt-3 mb-6">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
                     key={star}
@@ -58,9 +72,15 @@ const FeedbackModal = ({ setOpen }) => {
 
               {/* Message */}
               <div>
-                <form action="" className="mt-5">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  action=""
+                  className="mt-5"
+                >
                   <textarea
+                    {...register('userFeedback', { required: true })}
                     rows={5}
+                    name="userFeedback"
                     className="border resize-none border-[#CDBFBF] p-4 focus:outline-none rounded-md w-full"
                     placeholder="Write your feedback here."
                   />

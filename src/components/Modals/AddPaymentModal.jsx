@@ -12,7 +12,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 const AddPaymentModal = ({ setOpen }) => {
+  const { register, handleSubmit } = useForm();
+
+  // functions:
+  const onSubmit = (data) => {
+    console.log(data);
+    toast.success('Your payment added successfully');
+    setOpen(false);
+  };
   return (
     <DialogContent className="sm:max-w-[650px] px-10 py-6 text-center font-nunito">
       {/* Wrap everything in a container that can scroll and hide scrollbar */}
@@ -26,7 +36,11 @@ const AddPaymentModal = ({ setOpen }) => {
             <div className="w-full mt-4">
               {/* Message */}
               <div>
-                <form action="" className="mt-5 space-y-5">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  action=""
+                  className="mt-5 space-y-5"
+                >
                   <div className="space-y-2">
                     <label className="#0A0D13 font-medium" htmlFor="card-type">
                       Select Card Type
@@ -44,12 +58,13 @@ const AddPaymentModal = ({ setOpen }) => {
                     </Select>
                   </div>
                   <div className="space-y-2 ">
-                    <label className="#0A0D13 font-medium" htmlFor="card-type">
+                    <label className="#0A0D13 font-medium" htmlFor="cardNumber">
                       Card Number
                     </label>
 
                     <div className="w-full">
                       <input
+                        {...register('cardNumber', { required: true })}
                         className="text w-full border rounded-md px-5 focus:outline-none py-3"
                         placeholder="1234  5678  9101  1121"
                         type="number"
@@ -68,11 +83,12 @@ const AddPaymentModal = ({ setOpen }) => {
 
                     <div className="w-full">
                       <input
+                       {...register('expirationDate', { required: true })}
                         className="text w-full border rounded-md px-5 focus:outline-none py-3"
                         placeholder="1234  5678  9101  1121"
                         type="number"
-                        name="cardNumber"
-                        id="cardNumber"
+                        name="expirationDate"
+                        id="expirationDate"
                       />
                     </div>
                   </div>

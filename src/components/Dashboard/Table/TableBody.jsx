@@ -3,21 +3,36 @@ import { Modal } from '@/components/Modals/Modal';
 import SubscriptionModal from '@/components/Modals/SubscriptionModal';
 import { ViewSvg } from '@/components/SvgContainer/SvgContainer';
 import { useState } from 'react';
-
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
-const TableBody = ({ items, columns, status, doctor }) => {
+const TableBody = ({ items, columns, status, doctor, pharmacist }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const getDetailsRoute = () => {
+    if (doctor) return '/dashboard/doctor/order-details';
+    if (pharmacist) return '/dashboard/pharmacist/order-details';
+    return '/dashboard/user/order-details';
+  };
+
+  const handleRowClick = () => {
+    const detailsRoute = getDetailsRoute();
+
+    // Check if we're already on the details page for the current user type
+    const isAlreadyOnDetailsPage = location.pathname === detailsRoute;
+
+    if (!isAlreadyOnDetailsPage) {
+      navigate(detailsRoute);
+    }
+  };
+
   return (
     <>
       {items?.map((item, idx) => (
         <tr
-          onClick={() => {
-            !doctor && !status && navigate('/dashboard/user/order-details');
-            doctor && navigate('/dashboard/doctor/order-details');
-          }}
+          onClick={handleRowClick}
           key={idx}
           className="border-y hover:bg-primary/20 transition duration-300 text-sm md:text-base text-[#052D4C] font-medium cursor-pointer"
         >

@@ -92,7 +92,7 @@ const DoctorDashboardOrderManagement = () => {
   };
   return (
     <div>
-      {/* user stats */}
+      {/* filter*/}
       <div className="w-full flex items-center gap-10">
         {/* search bar */}
         <form
@@ -130,14 +130,14 @@ const DoctorDashboardOrderManagement = () => {
       <div className="mt-12 bg-white rounded-md px-16 py-10">
         <div className="w-full flex items-center justify-between">
           <h2 className="font-semibold text-3xl text-categoryBtnColor">
-            All order
+            All Order
           </h2>
         </div>
 
-        <DashboardTable orders={orders} doctor={true} />
+        <DashboardTable orders={orders} pharmacist={true} />
 
         {/* Pagination */}
-        <div className="mt-10 border-t border-black/20 w-full flex items-center justify-between py-6">
+        <div className="mt-20 border-t border-[#E5E7EB] w-full flex items-center justify-between py-6">
           <p className="text-[#374151]">Showing 1 to 10 of 97 results</p>
 
           {/* pagination btn */}

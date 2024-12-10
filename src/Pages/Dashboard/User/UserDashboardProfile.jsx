@@ -1,6 +1,7 @@
 import DashboardTitle from '@/components/Dashboard/User/DashboardTitle';
 import { useState } from 'react';
 import UserCalendar from '@/components/Dashboard/User/UserCalendar';
+import userPhoto from '@/assets/images/user.png';
 const UserDashboardProfile = () => {
   const genderOptions = [
     { id: 'male', label: 'Male' },
@@ -8,9 +9,7 @@ const UserDashboardProfile = () => {
     { id: 'others', label: 'Others' },
   ];
 
-  const [imagePreview, setImagePreview] = useState(
-    'https://i.postimg.cc/m2xPtgcd/user.png'
-  );
+  const [imagePreview, setImagePreview] = useState(userPhoto);
   const [fileName, setFileName] = useState('No File Chosen');
 
   const handleFileChange = (event) => {

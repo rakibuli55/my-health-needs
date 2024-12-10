@@ -27,6 +27,7 @@ import DoctorDashboardOrderManagement from '@/Pages/Dashboard/Doctor/DoctorDashb
 import PharmacistDashboardHomepage from '@/Pages/Dashboard/Pharmacist/PharmacistDashboardHomepage';
 import PharmacistOrderManagement from '@/Pages/Dashboard/Pharmacist/PharmacistOrderManagement';
 import OrderDetailsDoctor from '@/Pages/Dashboard/Doctor/OrderDetailsDoctor';
+import PharmacistOrderDetailsPage from '@/Pages/Dashboard/Pharmacist/PharmacistOrderDetailsPage';
 
 // Breadcrumb configuration
 const routes = [
@@ -156,6 +157,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/pharmacist/order-management',
         element: <PharmacistOrderManagement />,
+      },
+      {
+        path: '/dashboard/pharmacist/order-details',
+        element: <PharmacistOrderDetailsPage />,
       },
     ],
   },

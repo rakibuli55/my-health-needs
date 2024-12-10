@@ -6,7 +6,7 @@ import {
   DashboardStarSvg,
   ReviewSvg,
 } from '@/components/SvgContainer/SvgContainer';
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import {
   DashboardUserSvg,
   SubscriptionSvg,
@@ -16,7 +16,7 @@ import DashboardSidebar from '@/components/Dashboard/Sidebar/DashboardSidebar';
 import AosProvider from '@/provider/Aos/AosProvider';
 
 const DashboardLayout = () => {
-  const userType = 'doctor';
+  const userType = 'pharmacist';
   const userDashboardNavLinks = [
     {
       title: 'Homepage',
@@ -86,6 +86,7 @@ const DashboardLayout = () => {
 
   return (
     <AosProvider>
+      <ScrollRestoration></ScrollRestoration>
       <div className="min-h-screen max-h-screen flex overflow-hidden font-nunito">
         {/* sidebar */}
         <DashboardSidebar

@@ -125,8 +125,8 @@ const DoctorDashboardHomepage = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="All Order">All Order</SelectItem>
-                <SelectItem value="Recent">Recent</SelectItem>
-                <SelectItem value="Old">Old</SelectItem>
+                <SelectItem value="Delivered">Delivered</SelectItem>
+                <SelectItem value="Pending">Pending</SelectItem>
               </SelectContent>
             </Select>
           </div>

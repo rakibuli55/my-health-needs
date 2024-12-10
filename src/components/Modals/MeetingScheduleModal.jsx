@@ -6,8 +6,19 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { LinkSvg, ZoomSvg } from '../SvgContainer/SvgContainer';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const MeetingScheduleModal = ({ setOpen }) => {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    if (data) {
+      toast.success("Meeting Scheduled successfully!"); 
+      navigate('/dashboard/doctor/meeting-management');
+    }
+  };
   return (
     <DialogContent className="sm:max-w-[650px] px-10 py-6 text-center font-nunito">
       {/* Wrap everything in a container that can scroll and hide scrollbar */}
@@ -24,12 +35,17 @@ const MeetingScheduleModal = ({ setOpen }) => {
                 <h2 className="text-lg font-bold ">Details</h2>
 
                 {/* form */}
-                <form action="" className="mt-3 space-y-5">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  action=""
+                  className="mt-3 space-y-5"
+                >
                   <fieldset className="border border-gray-300 rounded-md p-2">
                     <legend className="text-sm font-medium text-gray-500 px-2">
                       Title *
                     </legend>
                     <input
+                      {...register('topic', { required: true })}
                       type="text"
                       placeholder="Enter Topic"
                       name="topic"
@@ -42,13 +58,14 @@ const MeetingScheduleModal = ({ setOpen }) => {
                     </legend>
                     <textarea
                       rows={3}
+                      {...register('description', { required: true })}
                       type="text"
                       placeholder="Enter Description"
                       name="description"
                       className="w-full resize-none border-0 outline-none px-2 py-1 text-gray-700"
                     />
                   </fieldset>
- 
+
                   {/* zoom meeting link */}
                   <div>
                     <div className="flex items-center gap-4">
@@ -68,9 +85,10 @@ const MeetingScheduleModal = ({ setOpen }) => {
                         Meeting Link *
                       </legend>
                       <input
+                        {...register('meetingLink', { required: true })}
                         type="text"
                         defaultValue="https://zoom.us/i/1983475281"
-                        name="topic"
+                        name="meetingLink"
                         className="w-full border-0 outline-none px-2 py-1 text-gray-700"
                       />
                     </fieldset>

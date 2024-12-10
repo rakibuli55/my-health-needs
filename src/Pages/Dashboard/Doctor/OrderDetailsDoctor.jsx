@@ -20,11 +20,11 @@ import {
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const OrderDetailsDoctor = () => {
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
+
   const { register, handleSubmit } = useForm();
   const medicineInfo = [
     {
@@ -45,17 +45,26 @@ const OrderDetailsDoctor = () => {
   const onSubmit = (data) => {
     console.log(data);
     if (data) {
-      toast.success('Your feedback has been saved successfully');
-      navigate('/dashboard/doctor/order-management');
+      toast.success('Note saved successfully');
+      //navigate('/dashboard/doctor/meeting-management');
     }
   };
   return (
     <div>
       {/* top title */}
-      <div className="text-[#052D4C] flex items-center font-semibold text-lg gap-2">
-        <h2>Order Management</h2>
-        <RightArrowSvg />
-        <h2>Order Details</h2>
+      <div className="w-full flex items-center justify-between">
+        <div className="text-[#052D4C] flex items-center font-semibold text-lg gap-2">
+          <h2>Order Management</h2>
+          <RightArrowSvg />
+          <h2>Order Details</h2>
+        </div>
+        <Link
+          to="/dashboard/doctor/order-management"
+          type="submit"
+          className="mt-5 font-semibold px-5 py-3 rounded-lg bg-primary text-white"
+        >
+          Update Order
+        </Link>
       </div>
 
       {/* Details */}
@@ -531,7 +540,6 @@ const OrderDetailsDoctor = () => {
 
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                
                 action=""
                 className="w-full mt-3"
               >
@@ -548,7 +556,7 @@ const OrderDetailsDoctor = () => {
                   type="submit"
                   className="mt-5 font-semibold px-5 py-3 rounded-lg bg-primary text-white"
                 >
-                  Assign to Pharmacist
+                  Add Note
                 </button>
               </form>
             </div>

@@ -34,7 +34,7 @@ const TableBody = ({ items, columns, status }) => {
     <>
       {items?.map((item, idx) => (
         <tr
-          onClick={handleRowClick}
+          onClick={!status && handleRowClick}
           key={idx}
           className="border-y hover:bg-primary/20 transition duration-300 text-sm md:text-base text-[#052D4C] font-medium cursor-pointer"
         >

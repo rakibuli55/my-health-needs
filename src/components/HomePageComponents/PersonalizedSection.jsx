@@ -32,7 +32,7 @@ function PersonalizedSection() {
                 Get genuine prescriptions delivered discreetly to your door, so
                 you can focus on what matters most — your health.
               </p>
-              <Link to={"/"} className="inline-block mt-10">
+              <Link to={"/service"} className="inline-block mt-10">
                 <CommonBtn
                   data-aos="zoom-in"
                   data-aos-duration="3000"

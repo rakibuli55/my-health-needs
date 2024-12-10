@@ -38,13 +38,13 @@ function HeroSection() {
             <Link
               data-aos="zoom-in"
               data-aos-duration="2000"
-              to={'/'}
+              to={'/service'}
               className="pb-[85px]"
             >
               <CommonBtn
                 data-aos="zoom-up"
                 data-aos-duration="2000"
-                text="Book an appointment"
+                text="Order Now"
                 arrowIcon={ArrowIconBlack}
                 height="60px"
                 width="60px"

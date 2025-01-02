@@ -10,7 +10,7 @@ import { MdOutlinePhone } from "react-icons/md";
 
 function Footer() {
   return (
-    <footer className="px-[50px] text-white mb-10">
+    <footer className="px-[50px] text-white mb-10 hidden">
       <div  data-aos="zoom-up"
                 data-aos-duration="1000" className="pt-[70px] pb-[117px] bg-primryDark rounded-[40px]">
         <div className="container">
@@ -117,7 +117,7 @@ function Footer() {
                 data-aos-duration="2000">Customer Support</h4>
               <ul>
                 <li data-aos="zoom-up"
-                data-aos-duration="2000"> 
+                data-aos-duration="2000">
                   <Link to={"/"}>FAQ’s</Link>
                 </li>
                 <li data-aos="zoom-up"
@@ -141,7 +141,7 @@ function Footer() {
                 data-aos-duration="2000">Useful Links</h4>
               <ul>
                 <li data-aos="zoom-up"
-                data-aos-duration="2000"> 
+                data-aos-duration="2000">
                   <Link to={"/"}>Careers</Link>
                 </li>
                 <li data-aos="zoom-up"

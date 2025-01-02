@@ -1,12 +1,12 @@
 
-import { Helmet } from 'react-helmet'
+// import { Helmet } from 'react-helmet'
 
-function PageTitle({title}) {
-  return (
-    <Helmet>
-        <title>My Health Needs || {title}</title>
-    </Helmet>
-  )
-}
+// function PageTitle({title}) {
+//   return (
+//     <Helmet>
+//         <title>My Health Needs || {title}</title>
+//     </Helmet>
+//   )
+// }
 
-export default PageTitle
+// export default PageTitle

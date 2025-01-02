@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
 
 function SymptomCard({ item }) {
+
   return (
-    <Link to='/service'
+    <Link
+      to="/service"
       data-aos="zoom-in"
       data-aos-duration="2000"
-      className="bg-no-repeat pt-[47px] pb-[40px] px-8 rounded-[20px] bg-[100%_100%] min-h-[412px] flex flex-col"
+      className="bg-no-repeat pt-[47px] pb-[40px] px-8 rounded-[20px] bg-[100%_100%] min-h-[412px] flex flex-col h-full"
       style={{ backgroundImage: `url(${item.imgUrl})` }}
     >
       <h3
@@ -18,15 +20,15 @@ function SymptomCard({ item }) {
         {item.title}
       </h3>
       <div data-aos="zoom-in" data-aos-duration="2000">
-        <Link
-          to={"/service"}
+        <button
+
           className="flex items-center gap-[10px] book-btn text-white"
         >
           <p>Book now</p>
           <div>
             <FaArrowRight />
           </div>
-        </Link>
+        </button>
       </div>
     </Link>
   );

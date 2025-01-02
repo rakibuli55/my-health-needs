@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import TreatmentCard from './TreatmentCard'
 
@@ -27,7 +26,7 @@ const popularTreatmentData = [
 
 function PopularTreatment() {
   return (
-    <section className='py-[140px]'>
+    <section className='py-[140px] hidden'>
         <div className='container'>
             {/* section-title  */}
             <div className="flex items-center justify-between mb-10">
@@ -36,7 +35,7 @@ function PopularTreatment() {
                 <Link  data-aos="zoom-up"
                 data-aos-duration="2000" to={'/'} className="text-[24px] font-semibold text-[#01548B]">See All</Link>
             </div>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-5'>
                 {
                     popularTreatmentData.map((item) => (
                         <div  data-aos="zoom-in"

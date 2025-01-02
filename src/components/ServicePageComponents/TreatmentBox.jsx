@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
 function TreatmentBox({ item }) {
@@ -8,8 +9,8 @@ function TreatmentBox({ item }) {
         {item.categoryName}
       </h3>
       <div className="flex flex-wrap treatment--row">
-        {item.treatments.map((treatment) => (
-          <div key={treatment.name} className="treatment-wrap mt-5">
+        {item.treatments.map((treatment,idx) => (
+          <div key={idx} className="treatment-wrap mt-5">
             <Link to={`/service/${formatUrl(treatment.name)}`} className="treatment outline outline-[white] duration-200 ease-in-out bg-white py-3 px-[22px] rounded-[10px] flex items-center gap-5 hover:outline-primary">
               <img src={treatment.image} alt={treatment.name} />
               <p className="text-[24px] font-semibold text-menuLinkColor">{treatment.name}</p>

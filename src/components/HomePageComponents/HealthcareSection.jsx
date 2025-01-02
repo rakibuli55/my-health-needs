@@ -23,7 +23,7 @@ function HealthcareSection() {
         },
     ]
   return (
-    <section className='px-[50px]'>
+    <section className='px-[50px] hidden'>
         <div className='py-[140px] bg-primryDark rounded-[40px]'>
             <div className='container'>
                 {/* section title  */}
@@ -31,7 +31,7 @@ function HealthcareSection() {
                             data-aos-duration="1000" className='text-center'>
                     <h3 className='text--xl text-white w-[60%] mx-auto'>Quick, Confidential, and Reliable Healthcare</h3>
                 </div>
-                <div className='grid grid-cols-3 gap-[16px]'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-[16px]'>
                     {
                         healthcareData.map((item) => (
                             <div data-aos="zoom-in"

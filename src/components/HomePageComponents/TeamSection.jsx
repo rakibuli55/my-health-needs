@@ -29,7 +29,7 @@ const teamData = [
 
 function TeamSection() {
   return (
-    <section className="py-[140px]">
+    <section className="py-[140px] hidden">
       <div className="container">
         {/* section title  */}
         <div className="mb-10">

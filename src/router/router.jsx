@@ -38,133 +38,143 @@ const routes = [
   { path: '/assessment', breadcrumb: `Consultation` },
 ];
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/',
-        element: <HomePage />,
-      },
-      {
-        path: '/service',
-        element: <ServicePage />,
-      },
-      {
-        path: '/service/:name',
-        element: <SingleHealthPage />,
-      },
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage />,
+        },
+        {
+          path: '/service',
+          element: <ServicePage />,
+        },
+        {
+          path: '/service/:name',
+          element: <SingleHealthPage />,
+        },
 
-      {
-        path: '/consultation',
-        element: <AssessmentPage></AssessmentPage>,
-      },
-      {
-        path: '/medicine-details',
-        element: <MedicineDetailsPage></MedicineDetailsPage>,
-      },
-      {
-        path: '/checkout',
-        element: <CheckoutPage />,
-      },
-      {
-        path: '/howitworks',
-        element: <HowItWorksPage />,
-      },
-      {
-        path: '/faq',
-        element: <FaqPage />,
-      },
-    ],
-  },
-  {
-    path: '/auth',
-    element: <AuthLayout></AuthLayout>,
-    children: [
-      {
-        path: '/auth/login',
-        element: <LoginPage></LoginPage>,
-      },
-      {
-        path: '/auth/signup',
-        element: <SignupPage></SignupPage>,
-      },
-    ],
-  },
-  {
-    path: '/dashboard',
-    element: <DashboardLayout />,
-    children: [
-      // user dashboard:
-      {
-        path: '/dashboard/user/user-homepage',
-        element: <UserDashboardHome />,
-      },
-      {
-        path: '/dashboard/user/user-order-history',
-        element: <UserDashboardOrder />,
-      },
-      {
-        path: '/dashboard/user/user-assessment-result',
-        element: <UserAssessmentResult />,
-      },
-      {
-        path: '/dashboard/user/order-details',
-        element: <UserOrderDetails />,
-      },
-      {
-        path: '/dashboard/user/user-payments',
-        element: <UserDashboardPayments />,
-      },
-      {
-        path: '/dashboard/user/user-subscription',
-        element: <UserSubscription />,
-      },
-      {
-        path: '/dashboard/user/user-review',
-        element: <UserReviews />,
-      },
-      {
-        path: '/dashboard/user/user-profile',
-        element: <UserDashboardProfile />,
-      },
+        {
+          path: '/consultation',
+          element: <AssessmentPage></AssessmentPage>,
+        },
+        {
+          path: '/medicine-details',
+          element: <MedicineDetailsPage></MedicineDetailsPage>,
+        },
+        {
+          path: '/checkout',
+          element: <CheckoutPage />,
+        },
+        {
+          path: '/howitworks',
+          element: <HowItWorksPage />,
+        },
+        {
+          path: '/faq',
+          element: <FaqPage />,
+        },
+      ],
+    },
+    {
+      path: '/auth',
+      element: <AuthLayout></AuthLayout>,
+      children: [
+        {
+          path: '/auth/login',
+          element: <LoginPage></LoginPage>,
+        },
+        {
+          path: '/auth/signup',
+          element: <SignupPage></SignupPage>,
+        },
+      ],
+    },
+    {
+      path: '/dashboard',
+      element: <DashboardLayout />,
+      children: [
+        // user dashboard:
+        {
+          path: 'user/user-homepage',
+          element: <UserDashboardHome />,
+        },
+        {
+          path: 'user/user-order-history',
+          element: <UserDashboardOrder />,
+        },
+        {
+          path: 'user/user-assessment-result',
+          element: <UserAssessmentResult />,
+        },
+        {
+          path: 'user/order-details',
+          element: <UserOrderDetails />,
+        },
+        {
+          path: 'user/user-payments',
+          element: <UserDashboardPayments />,
+        },
+        {
+          path: 'user/user-subscription',
+          element: <UserSubscription />,
+        },
+        {
+          path: 'user/user-review',
+          element: <UserReviews />,
+        },
+        {
+          path: 'user/user-profile',
+          element: <UserDashboardProfile />,
+        },
 
-      // Doctor Dashboard:
-      {
-        path: '/dashboard/doctor/homepage',
-        element: <DoctorDashboardHomepage />,
-      },
-      {
-        path: '/dashboard/doctor/order-details',
-        element: <OrderDetailsDoctor />,
-      },
-      {
-        path: '/dashboard/doctor/order-management',
-        element: <DoctorDashboardOrderManagement />,
-      },
-      {
-        path: '/dashboard/doctor/meeting-management',
-        element: <DoctorDashboardMeetingManagement />,
-      },
+        // Doctor Dashboard:
+        {
+          path: 'doctor/homepage',
+          element: <DoctorDashboardHomepage />,
+        },
+        {
+          path: 'doctor/order-details',
+          element: <OrderDetailsDoctor />,
+        },
+        {
+          path: 'doctor/order-management',
+          element: <DoctorDashboardOrderManagement />,
+        },
+        {
+          path: 'doctor/meeting-management',
+          element: <DoctorDashboardMeetingManagement />,
+        },
 
-      // Pharmacist Dashboard:
-      {
-        path: '/dashboard/pharmacist/homepage',
-        element: <PharmacistDashboardHomepage />,
-      },
-      {
-        path: '/dashboard/pharmacist/order-management',
-        element: <PharmacistOrderManagement />,
-      },
-      {
-        path: '/dashboard/pharmacist/order-details',
-        element: <PharmacistOrderDetailsPage />,
-      },
-    ],
-  },
-]);
+        // Pharmacist Dashboard:
+        {
+          path: 'pharmacist/homepage',
+          element: <PharmacistDashboardHomepage />,
+        },
+        {
+          path: 'pharmacist/order-management',
+          element: <PharmacistOrderManagement />,
+        },
+        {
+          path: 'pharmacist/order-details',
+          element: <PharmacistOrderDetailsPage />,
+        },
+      ],
+    },
+  ],
+  {
+    future: {
+      v7_normalizeFormMethod: true,
+      v7_partialHydration: true,
+      v7_fetcherPersist: true,
+      v7_skipActionErrorRevalidation: true,
+    },
+  }
+);
 
 export { routes };
 export default router;

@@ -30,26 +30,26 @@ const symptomsData = [
 
 function SymptomsSection() {
   return (
-    <section className="py-[140px]">
+    <section className="py-10 2xl:py-[140px]">
       <div className="container">
         {/* section-title  */}
         <div
           data-aos="zoom-in"
           data-aos-duration="1000"
-          className="flex items-center justify-between"
+          className="flex flex-col lg:items-center justify-between gap-5"
         >
-          <h2 className="text--xl">25+ Symptoms Specialities</h2>
-          <Link to={'/service'} className="text-[24px] font-semibold text-[#01548B]">
+          <h2 className="text-2xl 2xl:text--xl font-bold text-primary leading-normal">25+ Symptoms Specialities</h2>
+          <Link to={'/service'} className="text-xl 2xl:text-[24px] font-semibold text-[#01548B]">
             See All Specialties
           </Link>
         </div>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
           {symptomsData.map((item) => (
             <div
               data-aos="zoom-in"
               data-aos-duration="2000"
               key={item.id}
-              className="mt-10"
+              className="lg:mt-10"
             >
               <SymptomCard item={item} />
             </div>

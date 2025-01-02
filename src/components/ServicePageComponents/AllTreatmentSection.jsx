@@ -157,11 +157,11 @@ function AllTreatmentSection() {
           </div>
         </div>
         <div>
-          {treatmentsCategories.map((category) => (
+          {treatmentsCategories.map((category,idx) => (
             <div
               data-aos="zoom-in"
               data-aos-duration="2000"
-              key={category.categoryName}
+              key={idx}
               className="mt-10"
             >
               <TreatmentBox item={category} />

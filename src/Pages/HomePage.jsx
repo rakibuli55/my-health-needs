@@ -6,12 +6,12 @@ import HealthcareSection from "../components/HomePageComponents/HealthcareSectio
 import TeamSection from "../components/HomePageComponents/TeamSection";
 import TestimonialSection from "../components/HomePageComponents/TestimonialSection";
 import FaqSection from "../components/HomePageComponents/FaqSection";
-import PageTitle from "@/components/Common/PageTitle";
+
 
 function HomePage() {
   return (
-    <div>
-      <PageTitle title="Home" />
+    <div className="mt-[75px] lg:mt-0">
+      {/* <PageTitle title="Home" /> */}
       <HeroSection />
       <SymptomsSection />
       <PersonalizedSection />
